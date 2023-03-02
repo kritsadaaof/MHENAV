@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Web_MMLNAVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Group_Time">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Text" Type="nvarchar" MaxLength="100" />
+    <Property Name="Group" Type="time" Precision="7" />
+  </EntityType>
+  <EntityType Name="W_MHE_TR_Entries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer" Type="nvarchar" MaxLength="255" />
+    <Property Name="Contract_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="BU" Type="nvarchar" MaxLength="255" />
+    <Property Name="Base" Type="nvarchar" MaxLength="255" />
+    <Property Name="Req_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="Confirm" Type="nvarchar" MaxLength="255" />
+    <Property Name="Timestamp" Type="datetime" />
+    <Property Name="Request_Date" Type="datetime2" Precision="7" />
+    <Property Name="Truck_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="Province" Type="nvarchar" MaxLength="255" />
+    <Property Name="Origin" Type="nvarchar" MaxLength="255" />
+    <Property Name="Actual " Type="nvarchar" MaxLength="255" />
+    <Property Name="Ship_Point" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cust_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Ship_To" Type="nvarchar" MaxLength="255" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="255" />
+    <Property Name="Remark1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Remark2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Remark3" Type="nvarchar" MaxLength="255" />
+    <Property Name="Coil" Type="nvarchar" MaxLength="255" />
+    <Property Name="Wcoil" Type="nvarchar" MaxLength="255" />
+    <Property Name="Reel" Type="nvarchar" MaxLength="255" />
+    <Property Name="Wreel" Type="nvarchar" MaxLength="255" />
+    <Property Name="Wsum" Type="nvarchar" MaxLength="255" />
+    <Property Name="Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Load" Type="nvarchar" MaxLength="255" />
+    <Property Name="Type_Status" Type="int" />
+    <Property Name="Customer_Ref" Type="nvarchar" MaxLength="255" />
+    <Property Name="Package" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cargo_Type" Type="nvarchar" MaxLength="255" />
+    <Property Name="Formality_Sup" Type="nvarchar" MaxLength="255" />
+    <Property Name="Formality_Mode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Port" Type="nvarchar" MaxLength="255" />
+    <Property Name="ETA_Date" Type="datetime2" Precision="7" />
+    <Property Name="ATA_Date" Type="datetime2" Precision="7" />
+    <Property Name="Shipping_Agent" Type="nvarchar" MaxLength="255" />
+    <Property Name="Shipping_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Plan_Clearing_Date" Type="datetime2" Precision="7" />
+    <Property Name="Airway_Bill_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="Delivery_Place" Type="nvarchar" MaxLength="255" />
+    <Property Name="Clearanc_Date" Type="datetime2" Precision="7" />
+    <Property Name="Export_Entry_Declaration" Type="nvarchar" MaxLength="255" />
+    <Property Name="Packing_List_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="Commercial_Invoice" Type="nvarchar" MaxLength="255" />
+    <Property Name="QTY" Type="int" />
+    <Property Name="Unit" Type="nvarchar" MaxLength="255" />
+    <Property Name="Detail" Type="nvarchar" MaxLength="255" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+    <Property Name="WO_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="PO_NO" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserCreate" Type="nvarchar" MaxLength="50" />
+    <Property Name="CusRefNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="Jobprocess" Type="nvarchar" MaxLength="255" />
+    <Property Name="Delivery_Date" Type="datetime2" Precision="7" />
+    <Property Name="TotalW" Type="float" />
+    <Property Name="Clearance_Date" Type="datetime2" Precision="7" />
+    <Property Name="Supplier_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="MAWB_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="Bil_of_Lading_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="HAWB_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="Booking_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="OriginLInputTel" Type="nvarchar" MaxLength="255" />
+    <Property Name="DestinationTel" Type="nvarchar" MaxLength="255" />
+    <Property Name="Loading_Location" Type="nvarchar" MaxLength="255" />
+    <Property Name="Contact_Loading_Location_Tel" Type="nvarchar" MaxLength="255" />
+    <Property Name="Import_Entry_Declaration" Type="nvarchar" MaxLength="255" />
+    <Property Name="CheckTypeBU" Type="nvarchar" MaxLength="10" />
+    <Property Name="DateNow" Type="datetime2" Precision="7" />
+  </EntityType>
+  <EntityContainer Name="Web_MMLNAVModelStoreContainer">
+    <EntitySet Name="Group_Time" EntityType="Self.Group_Time" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Web_MMLNAVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Group_Time">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Text" Type="nvarchar" MaxLength="100" />
+          <Property Name="Group" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="W_MHE_TR_Entries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Customer" Type="nvarchar" MaxLength="255" />
+          <Property Name="Contract_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="BU" Type="nvarchar" MaxLength="255" />
+          <Property Name="Base" Type="nvarchar" MaxLength="255" />
+          <Property Name="Req_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="Confirm" Type="nvarchar" MaxLength="255" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="Request_Date" Type="datetime2" Precision="7" />
+          <Property Name="Truck_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="Province" Type="nvarchar" MaxLength="255" />
+          <Property Name="Origin" Type="nvarchar" MaxLength="255" />
+          <Property Name="Actual " Type="nvarchar" MaxLength="255" />
+          <Property Name="Ship_Point" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cust_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Ship_To" Type="nvarchar" MaxLength="255" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="255" />
+          <Property Name="Remark1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Remark2" Type="nvarchar" MaxLength="255" />
+          <Property Name="Remark3" Type="nvarchar" MaxLength="255" />
+          <Property Name="Coil" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wcoil" Type="nvarchar" MaxLength="255" />
+          <Property Name="Reel" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wreel" Type="nvarchar" MaxLength="255" />
+          <Property Name="Wsum" Type="nvarchar" MaxLength="255" />
+          <Property Name="Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Load" Type="nvarchar" MaxLength="255" />
+          <Property Name="Type_Status" Type="int" />
+          <Property Name="Customer_Ref" Type="nvarchar" MaxLength="255" />
+          <Property Name="Package" Type="nvarchar" MaxLength="255" />
+          <Property Name="Cargo_Type" Type="nvarchar" MaxLength="255" />
+          <Property Name="Formality_Sup" Type="nvarchar" MaxLength="255" />
+          <Property Name="Formality_Mode" Type="nvarchar" MaxLength="255" />
+          <Property Name="Port" Type="nvarchar" MaxLength="255" />
+          <Property Name="ETA_Date" Type="datetime2" Precision="7" />
+          <Property Name="ATA_Date" Type="datetime2" Precision="7" />
+          <Property Name="Shipping_Agent" Type="nvarchar" MaxLength="255" />
+          <Property Name="Shipping_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Plan_Clearing_Date" Type="datetime2" Precision="7" />
+          <Property Name="Airway_Bill_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="Delivery_Place" Type="nvarchar" MaxLength="255" />
+          <Property Name="Clearanc_Date" Type="datetime2" Precision="7" />
+          <Property Name="Export_Entry_Declaration" Type="nvarchar" MaxLength="255" />
+          <Property Name="Packing_List_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="Commercial_Invoice" Type="nvarchar" MaxLength="255" />
+          <Property Name="QTY" Type="int" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="255" />
+          <Property Name="Detail" Type="nvarchar" MaxLength="255" />
+          <Property Name="Remark" Type="nvarchar" MaxLength="255" />
+          <Property Name="WO_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="PO_NO" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserCreate" Type="nvarchar" MaxLength="50" />
+          <Property Name="CusRefNo" Type="nvarchar" MaxLength="255" />
+          <Property Name="Jobprocess" Type="nvarchar" MaxLength="255" />
+          <Property Name="Delivery_Date" Type="datetime2" Precision="7" />
+          <Property Name="TotalW" Type="float" />
+          <Property Name="Clearance_Date" Type="datetime2" Precision="7" />
+          <Property Name="Supplier_Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="MAWB_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="Bil_of_Lading_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="HAWB_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="Booking_No" Type="nvarchar" MaxLength="255" />
+          <Property Name="OriginLInputTel" Type="nvarchar" MaxLength="255" />
+          <Property Name="DestinationTel" Type="nvarchar" MaxLength="255" />
+          <Property Name="Loading_Location" Type="nvarchar" MaxLength="255" />
+          <Property Name="Contact_Loading_Location_Tel" Type="nvarchar" MaxLength="255" />
+          <Property Name="Import_Entry_Declaration" Type="nvarchar" MaxLength="255" />
+          <Property Name="CheckTypeBU" Type="nvarchar" MaxLength="10" />
+          <Property Name="DateNow" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityContainer Name="Web_MMLNAVModelStoreContainer">
+          <EntitySet Name="Group_Time" EntityType="Self.Group_Time" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Web_MMLNAVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="W_MHE_TR_Entries">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Customer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Contract_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Base" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Req_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Confirm" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Timestamp" Type="DateTime" Precision="3" />
+          <Property Name="Request_Date" Type="DateTime" Precision="7" />
+          <Property Name="Truck_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Province" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Origin" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Actual_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_Point" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Cust_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Ship_To" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Remark1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Remark2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Remark3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Coil" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Wcoil" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Reel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Wreel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Wsum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Load" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Type_Status" Type="Int32" />
+          <Property Name="Customer_Ref" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Package" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Cargo_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Formality_Sup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Formality_Mode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Port" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ETA_Date" Type="DateTime" Precision="7" />
+          <Property Name="ATA_Date" Type="DateTime" Precision="7" />
+          <Property Name="Shipping_Agent" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Shipping_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Plan_Clearing_Date" Type="DateTime" Precision="7" />
+          <Property Name="Airway_Bill_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Place" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Clearanc_Date" Type="DateTime" Precision="7" />
+          <Property Name="Export_Entry_Declaration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Packing_List_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Commercial_Invoice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="QTY" Type="Int32" />
+          <Property Name="Unit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Detail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="WO_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PO_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserCreate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CusRefNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Jobprocess" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Delivery_Date" Type="DateTime" Precision="7" />
+          <Property Name="TotalW" Type="Double" />
+          <Property Name="Clearance_Date" Type="DateTime" Precision="7" />
+          <Property Name="Supplier_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MAWB_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Bil_of_Lading_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HAWB_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Booking_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OriginLInputTel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DestinationTel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Loading_Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Loading_Location_Tel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Import_Entry_Declaration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CheckTypeBU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DateNow" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityContainer Name="Web_MMLNAVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" />
+          <EntitySet Name="Group_Time" EntityType="Web_MMLNAVModel.Group_Time" />
+        </EntityContainer>
+        <EntityType Name="Group_Time">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Group" Type="Time" Precision="7" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Web_MMLNAVModelStoreContainer" CdmEntityContainer="Web_MMLNAVEntities">
+          <EntitySetMapping Name="W_MHE_TR_Entries">
+            <EntityTypeMapping TypeName="Web_MMLNAVModel.W_MHE_TR_Entries">
+              <MappingFragment StoreEntitySet="W_MHE_TR_Entries">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="Contract_No" ColumnName="Contract_No" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="Base" ColumnName="Base" />
+                <ScalarProperty Name="Req_No" ColumnName="Req_No" />
+                <ScalarProperty Name="Confirm" ColumnName="Confirm" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="Request_Date" ColumnName="Request_Date" />
+                <ScalarProperty Name="Truck_No" ColumnName="Truck_No" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="Origin" ColumnName="Origin" />
+                <ScalarProperty Name="Actual_" ColumnName="Actual " />
+                <ScalarProperty Name="Ship_Point" ColumnName="Ship_Point" />
+                <ScalarProperty Name="Cust_Name" ColumnName="Cust_Name" />
+                <ScalarProperty Name="Ship_To" ColumnName="Ship_To" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Remark1" ColumnName="Remark1" />
+                <ScalarProperty Name="Remark2" ColumnName="Remark2" />
+                <ScalarProperty Name="Remark3" ColumnName="Remark3" />
+                <ScalarProperty Name="Coil" ColumnName="Coil" />
+                <ScalarProperty Name="Wcoil" ColumnName="Wcoil" />
+                <ScalarProperty Name="Reel" ColumnName="Reel" />
+                <ScalarProperty Name="Wreel" ColumnName="Wreel" />
+                <ScalarProperty Name="Wsum" ColumnName="Wsum" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Load" ColumnName="Load" />
+                <ScalarProperty Name="Type_Status" ColumnName="Type_Status" />
+                <ScalarProperty Name="Customer_Ref" ColumnName="Customer_Ref" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="Cargo_Type" ColumnName="Cargo_Type" />
+                <ScalarProperty Name="Formality_Sup" ColumnName="Formality_Sup" />
+                <ScalarProperty Name="Formality_Mode" ColumnName="Formality_Mode" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="ETA_Date" ColumnName="ETA_Date" />
+                <ScalarProperty Name="ATA_Date" ColumnName="ATA_Date" />
+                <ScalarProperty Name="Shipping_Agent" ColumnName="Shipping_Agent" />
+                <ScalarProperty Name="Shipping_Name" ColumnName="Shipping_Name" />
+                <ScalarProperty Name="Plan_Clearing_Date" ColumnName="Plan_Clearing_Date" />
+                <ScalarProperty Name="Airway_Bill_No" ColumnName="Airway_Bill_No" />
+                <ScalarProperty Name="Delivery_Place" ColumnName="Delivery_Place" />
+                <ScalarProperty Name="Clearanc_Date" ColumnName="Clearanc_Date" />
+                <ScalarProperty Name="Export_Entry_Declaration" ColumnName="Export_Entry_Declaration" />
+                <ScalarProperty Name="Packing_List_No" ColumnName="Packing_List_No" />
+                <ScalarProperty Name="Commercial_Invoice" ColumnName="Commercial_Invoice" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="WO_No" ColumnName="WO_No" />
+                <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+                <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+                <ScalarProperty Name="CusRefNo" ColumnName="CusRefNo" />
+                <ScalarProperty Name="Jobprocess" ColumnName="Jobprocess" />
+                <ScalarProperty Name="Delivery_Date" ColumnName="Delivery_Date" />
+                <ScalarProperty Name="TotalW" ColumnName="TotalW" />
+                <ScalarProperty Name="Clearance_Date" ColumnName="Clearance_Date" />
+                <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+                <ScalarProperty Name="MAWB_No" ColumnName="MAWB_No" />
+                <ScalarProperty Name="Bil_of_Lading_No" ColumnName="Bil_of_Lading_No" />
+                <ScalarProperty Name="HAWB_No" ColumnName="HAWB_No" />
+                <ScalarProperty Name="Booking_No" ColumnName="Booking_No" />
+                <ScalarProperty Name="OriginLInputTel" ColumnName="OriginLInputTel" />
+                <ScalarProperty Name="DestinationTel" ColumnName="DestinationTel" />
+                <ScalarProperty Name="Loading_Location" ColumnName="Loading_Location" />
+                <ScalarProperty Name="Contact_Loading_Location_Tel" ColumnName="Contact_Loading_Location_Tel" />
+                <ScalarProperty Name="Import_Entry_Declaration" ColumnName="Import_Entry_Declaration" />
+                <ScalarProperty Name="CheckTypeBU" ColumnName="CheckTypeBU" />
+                <ScalarProperty Name="DateNow" ColumnName="DateNow" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Group_Time">
+            <EntityTypeMapping TypeName="Web_MMLNAVModel.Group_Time">
+              <MappingFragment StoreEntitySet="Group_Time">
+                <ScalarProperty Name="Group" ColumnName="Group" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

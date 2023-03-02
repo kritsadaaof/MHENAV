@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MMLogisticsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MM Logistics CO_, LTD_$Temp Request">
+    <Key>
+      <PropertyRef Name="Request ID" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="Request ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Job Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Business Unit" Type="int" Nullable="false" />
+    <Property Name="Job Contract No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Bill-to Customer No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Pick up Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Origin Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Destination Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Export Entry Declaration" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Packing List No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Commercial Invoice No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Customer Reference No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Shipping Agent" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Bil of Lading No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Ordinary Transire No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Airway Bill No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Car Manifest No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Import Entry Declaration" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Pilotage No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Port Clearance No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ATA Date" Type="datetime" Nullable="false" />
+    <Property Name="ETA Date" Type="datetime" Nullable="false" />
+    <Property Name="Clearance Date" Type="datetime" Nullable="false" />
+    <Property Name="Plan Clearing Date" Type="datetime" Nullable="false" />
+    <Property Name="Package" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Delivery Place" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Item List No_" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Receipt DO From" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Information Of Conveyance No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Temporary Date" Type="datetime" Nullable="false" />
+    <Property Name="Return Temporary Date" Type="datetime" Nullable="false" />
+    <Property Name="Consignee No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Consignee Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Well Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Well Number" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Date of Disposal" Type="datetime" Nullable="false" />
+    <Property Name="Type of Waste" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Payment Condition" Type="int" Nullable="false" />
+    <Property Name="Customer Operation" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Manifest No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Request Date Time" Type="datetime" Nullable="false" />
+    <Property Name="Due Date Time" Type="datetime" Nullable="false" />
+    <Property Name="Extend Start Date" Type="datetime" Nullable="false" />
+    <Property Name="Extend End Date" Type="datetime" Nullable="false" />
+    <Property Name="Formality Mode" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Port" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Cargo Type" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Declaration Type" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Vessel Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Formality Sub Type" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Planning Start Date" Type="datetime" Nullable="false" />
+    <Property Name="Planning End Date" Type="datetime" Nullable="false" />
+    <Property Name="Appointment Date" Type="datetime" Nullable="false" />
+    <Property Name="Appointment Time" Type="datetime" Nullable="false" />
+    <Property Name="Pickup Date" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Page Type" Type="int" Nullable="false" />
+    <Property Name="Work Order No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Job Process No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Contact Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Actual Amount" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Global Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Confirm_" Type="tinyint" Nullable="false" />
+    <Property Name="Timestamp_" Type="datetime" Nullable="false" />
+    <Property Name="Truck_No" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Province" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ship_Point" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cust_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark3" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Coil" Type="int" Nullable="false" />
+    <Property Name="Wcoil" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Reel" Type="int" Nullable="false" />
+    <Property Name="Wreel" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Wsum" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Load" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type_Status" Type="int" Nullable="false" />
+    <Property Name="Customer_Ref" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Shipping_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Packing_List_No" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Remark1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PO_NO" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="UserCreate" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Delivery_Date" Type="datetime" Nullable="false" />
+    <Property Name="TotalW" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Supplier_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAWB_No" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="HAWB_No" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Booking_No" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="OriginLInputTel" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="DestinationTel" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Loading_Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contact_Loading_Location_Tel" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contact_Person" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="MMLogisticsModelStoreContainer">
+    <EntitySet Name="MM Logistics CO_, LTD_$Temp Request" EntityType="Self.MM Logistics CO_, LTD_$Temp Request" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

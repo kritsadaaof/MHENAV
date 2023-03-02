@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Web_MMLNAVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="W_MHE_TR_Entries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Contract_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Base" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Req_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Confirm" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Timestamp" Type="DateTime" Precision="3" />
+    <Property Name="Request_Date" Type="DateTime" Precision="7" />
+    <Property Name="Truck_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Province" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Origin" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Actual_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ship_Point" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cust_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Ship_To" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Contact" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Coil" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Wcoil" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Reel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Wreel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Wsum" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Load" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Type_Status" Type="Int32" />
+    <Property Name="Customer_Ref" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Package" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Cargo_Type" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Formality_Sup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Formality_Mode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Port" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ETA_Date" Type="DateTime" Precision="7" />
+    <Property Name="ATA_Date" Type="DateTime" Precision="7" />
+    <Property Name="Shipping_Agent" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Shipping_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Plan_Clearing_Date" Type="DateTime" Precision="7" />
+    <Property Name="Airway_Bill_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Place" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Clearanc_Date" Type="DateTime" Precision="7" />
+    <Property Name="Export_Entry_Declaration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Packing_List_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Commercial_Invoice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="QTY" Type="Int32" />
+    <Property Name="Unit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Detail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Remark" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="WO_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PO_NO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserCreate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CusRefNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Jobprocess" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Delivery_Date" Type="DateTime" Precision="7" />
+    <Property Name="TotalW" Type="Double" />
+    <Property Name="Clearance_Date" Type="DateTime" Precision="7" />
+    <Property Name="Supplier_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MAWB_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Bil_of_Lading_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="HAWB_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Booking_No" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OriginLInputTel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DestinationTel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Loading_Location" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Contact_Loading_Location_Tel" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Import_Entry_Declaration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CheckTypeBU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DateNow" Type="DateTime" Precision="7" />
+  </EntityType>
+  <EntityContainer Name="Web_MMLNAVEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" />
+    <EntitySet Name="Group_Time" EntityType="Web_MMLNAVModel.Group_Time" />
+  </EntityContainer>
+  <EntityType Name="Group_Time">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Group" Type="Time" Precision="7" />
+  </EntityType>
+</Schema>

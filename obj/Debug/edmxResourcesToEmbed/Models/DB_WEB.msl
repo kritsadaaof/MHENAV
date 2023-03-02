@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Web_MMLNAVModelStoreContainer" CdmEntityContainer="Web_MMLNAVEntities">
+    <EntitySetMapping Name="W_MHE_TR_Entries">
+      <EntityTypeMapping TypeName="Web_MMLNAVModel.W_MHE_TR_Entries">
+        <MappingFragment StoreEntitySet="W_MHE_TR_Entries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Contract_No" ColumnName="Contract_No" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="Base" ColumnName="Base" />
+          <ScalarProperty Name="Req_No" ColumnName="Req_No" />
+          <ScalarProperty Name="Confirm" ColumnName="Confirm" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="Request_Date" ColumnName="Request_Date" />
+          <ScalarProperty Name="Truck_No" ColumnName="Truck_No" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Origin" ColumnName="Origin" />
+          <ScalarProperty Name="Actual_" ColumnName="Actual " />
+          <ScalarProperty Name="Ship_Point" ColumnName="Ship_Point" />
+          <ScalarProperty Name="Cust_Name" ColumnName="Cust_Name" />
+          <ScalarProperty Name="Ship_To" ColumnName="Ship_To" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Remark1" ColumnName="Remark1" />
+          <ScalarProperty Name="Remark2" ColumnName="Remark2" />
+          <ScalarProperty Name="Remark3" ColumnName="Remark3" />
+          <ScalarProperty Name="Coil" ColumnName="Coil" />
+          <ScalarProperty Name="Wcoil" ColumnName="Wcoil" />
+          <ScalarProperty Name="Reel" ColumnName="Reel" />
+          <ScalarProperty Name="Wreel" ColumnName="Wreel" />
+          <ScalarProperty Name="Wsum" ColumnName="Wsum" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Load" ColumnName="Load" />
+          <ScalarProperty Name="Type_Status" ColumnName="Type_Status" />
+          <ScalarProperty Name="Customer_Ref" ColumnName="Customer_Ref" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Cargo_Type" ColumnName="Cargo_Type" />
+          <ScalarProperty Name="Formality_Sup" ColumnName="Formality_Sup" />
+          <ScalarProperty Name="Formality_Mode" ColumnName="Formality_Mode" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="ETA_Date" ColumnName="ETA_Date" />
+          <ScalarProperty Name="ATA_Date" ColumnName="ATA_Date" />
+          <ScalarProperty Name="Shipping_Agent" ColumnName="Shipping_Agent" />
+          <ScalarProperty Name="Shipping_Name" ColumnName="Shipping_Name" />
+          <ScalarProperty Name="Plan_Clearing_Date" ColumnName="Plan_Clearing_Date" />
+          <ScalarProperty Name="Airway_Bill_No" ColumnName="Airway_Bill_No" />
+          <ScalarProperty Name="Delivery_Place" ColumnName="Delivery_Place" />
+          <ScalarProperty Name="Clearanc_Date" ColumnName="Clearanc_Date" />
+          <ScalarProperty Name="Export_Entry_Declaration" ColumnName="Export_Entry_Declaration" />
+          <ScalarProperty Name="Packing_List_No" ColumnName="Packing_List_No" />
+          <ScalarProperty Name="Commercial_Invoice" ColumnName="Commercial_Invoice" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Detail" ColumnName="Detail" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="WO_No" ColumnName="WO_No" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="CusRefNo" ColumnName="CusRefNo" />
+          <ScalarProperty Name="Jobprocess" ColumnName="Jobprocess" />
+          <ScalarProperty Name="Delivery_Date" ColumnName="Delivery_Date" />
+          <ScalarProperty Name="TotalW" ColumnName="TotalW" />
+          <ScalarProperty Name="Clearance_Date" ColumnName="Clearance_Date" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="MAWB_No" ColumnName="MAWB_No" />
+          <ScalarProperty Name="Bil_of_Lading_No" ColumnName="Bil_of_Lading_No" />
+          <ScalarProperty Name="HAWB_No" ColumnName="HAWB_No" />
+          <ScalarProperty Name="Booking_No" ColumnName="Booking_No" />
+          <ScalarProperty Name="OriginLInputTel" ColumnName="OriginLInputTel" />
+          <ScalarProperty Name="DestinationTel" ColumnName="DestinationTel" />
+          <ScalarProperty Name="Loading_Location" ColumnName="Loading_Location" />
+          <ScalarProperty Name="Contact_Loading_Location_Tel" ColumnName="Contact_Loading_Location_Tel" />
+          <ScalarProperty Name="Import_Entry_Declaration" ColumnName="Import_Entry_Declaration" />
+          <ScalarProperty Name="CheckTypeBU" ColumnName="CheckTypeBU" />
+          <ScalarProperty Name="DateNow" ColumnName="DateNow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Group_Time">
+      <EntityTypeMapping TypeName="Web_MMLNAVModel.Group_Time">
+        <MappingFragment StoreEntitySet="Group_Time">
+          <ScalarProperty Name="Group" ColumnName="Group" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

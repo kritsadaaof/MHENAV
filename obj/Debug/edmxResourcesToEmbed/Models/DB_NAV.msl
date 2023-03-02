@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MMLogisticsModelStoreContainer" CdmEntityContainer="MMLogisticsEntities">
+    <EntitySetMapping Name="MM_Logistics_CO___LTD__Temp_Request">
+      <EntityTypeMapping TypeName="MMLogisticsModel.MM_Logistics_CO___LTD__Temp_Request">
+        <MappingFragment StoreEntitySet="MM Logistics CO_, LTD_$Temp Request">
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="Request_ID" ColumnName="Request ID" />
+          <ScalarProperty Name="Job_Order_No_" ColumnName="Job Order No_" />
+          <ScalarProperty Name="Business_Unit" ColumnName="Business Unit" />
+          <ScalarProperty Name="Job_Contract_No_" ColumnName="Job Contract No_" />
+          <ScalarProperty Name="Bill_to_Customer_No_" ColumnName="Bill-to Customer No_" />
+          <ScalarProperty Name="Pick_up_Description" ColumnName="Pick up Description" />
+          <ScalarProperty Name="Origin_Description" ColumnName="Origin Description" />
+          <ScalarProperty Name="Destination_Description" ColumnName="Destination Description" />
+          <ScalarProperty Name="Export_Entry_Declaration" ColumnName="Export Entry Declaration" />
+          <ScalarProperty Name="Packing_List_No_" ColumnName="Packing List No_" />
+          <ScalarProperty Name="Commercial_Invoice_No_" ColumnName="Commercial Invoice No_" />
+          <ScalarProperty Name="Customer_Reference_No_" ColumnName="Customer Reference No_" />
+          <ScalarProperty Name="Shipping_Agent" ColumnName="Shipping Agent" />
+          <ScalarProperty Name="Bil_of_Lading_No_" ColumnName="Bil of Lading No_" />
+          <ScalarProperty Name="Ordinary_Transire_No_" ColumnName="Ordinary Transire No_" />
+          <ScalarProperty Name="Airway_Bill_No_" ColumnName="Airway Bill No_" />
+          <ScalarProperty Name="Car_Manifest_No_" ColumnName="Car Manifest No_" />
+          <ScalarProperty Name="Import_Entry_Declaration" ColumnName="Import Entry Declaration" />
+          <ScalarProperty Name="Pilotage_No_" ColumnName="Pilotage No_" />
+          <ScalarProperty Name="Port_Clearance_No_" ColumnName="Port Clearance No_" />
+          <ScalarProperty Name="ATA_Date" ColumnName="ATA Date" />
+          <ScalarProperty Name="ETA_Date" ColumnName="ETA Date" />
+          <ScalarProperty Name="Clearance_Date" ColumnName="Clearance Date" />
+          <ScalarProperty Name="Plan_Clearing_Date" ColumnName="Plan Clearing Date" />
+          <ScalarProperty Name="Package" ColumnName="Package" />
+          <ScalarProperty Name="Delivery_Place" ColumnName="Delivery Place" />
+          <ScalarProperty Name="Item_List_No_" ColumnName="Item List No_" />
+          <ScalarProperty Name="Receipt_DO_From" ColumnName="Receipt DO From" />
+          <ScalarProperty Name="Information_Of_Conveyance_No_" ColumnName="Information Of Conveyance No_" />
+          <ScalarProperty Name="Temporary_Date" ColumnName="Temporary Date" />
+          <ScalarProperty Name="Return_Temporary_Date" ColumnName="Return Temporary Date" />
+          <ScalarProperty Name="Consignee_No_" ColumnName="Consignee No_" />
+          <ScalarProperty Name="Consignee_Name" ColumnName="Consignee Name" />
+          <ScalarProperty Name="Well_Name" ColumnName="Well Name" />
+          <ScalarProperty Name="Well_Number" ColumnName="Well Number" />
+          <ScalarProperty Name="Date_of_Disposal" ColumnName="Date of Disposal" />
+          <ScalarProperty Name="Type_of_Waste" ColumnName="Type of Waste" />
+          <ScalarProperty Name="Payment_Condition" ColumnName="Payment Condition" />
+          <ScalarProperty Name="Customer_Operation" ColumnName="Customer Operation" />
+          <ScalarProperty Name="Manifest_No_" ColumnName="Manifest No_" />
+          <ScalarProperty Name="Request_Date_Time" ColumnName="Request Date Time" />
+          <ScalarProperty Name="Due_Date_Time" ColumnName="Due Date Time" />
+          <ScalarProperty Name="Extend_Start_Date" ColumnName="Extend Start Date" />
+          <ScalarProperty Name="Extend_End_Date" ColumnName="Extend End Date" />
+          <ScalarProperty Name="Formality_Mode" ColumnName="Formality Mode" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="Cargo_Type" ColumnName="Cargo Type" />
+          <ScalarProperty Name="Declaration_Type" ColumnName="Declaration Type" />
+          <ScalarProperty Name="Vessel_Name" ColumnName="Vessel Name" />
+          <ScalarProperty Name="Formality_Sub_Type" ColumnName="Formality Sub Type" />
+          <ScalarProperty Name="Planning_Start_Date" ColumnName="Planning Start Date" />
+          <ScalarProperty Name="Planning_End_Date" ColumnName="Planning End Date" />
+          <ScalarProperty Name="Appointment_Date" ColumnName="Appointment Date" />
+          <ScalarProperty Name="Appointment_Time" ColumnName="Appointment Time" />
+          <ScalarProperty Name="Pickup_Date" ColumnName="Pickup Date" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Page_Type" ColumnName="Page Type" />
+          <ScalarProperty Name="Work_Order_No_" ColumnName="Work Order No_" />
+          <ScalarProperty Name="Job_Process_No_" ColumnName="Job Process No_" />
+          <ScalarProperty Name="Contact_Name" ColumnName="Contact Name" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Actual_Amount" ColumnName="Actual Amount" />
+          <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+          <ScalarProperty Name="Confirm_" ColumnName="Confirm_" />
+          <ScalarProperty Name="Timestamp_" ColumnName="Timestamp_" />
+          <ScalarProperty Name="Truck_No" ColumnName="Truck_No" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Ship_Point" ColumnName="Ship_Point" />
+          <ScalarProperty Name="Cust_Name" ColumnName="Cust_Name" />
+          <ScalarProperty Name="Remark2" ColumnName="Remark2" />
+          <ScalarProperty Name="Remark3" ColumnName="Remark3" />
+          <ScalarProperty Name="Coil" ColumnName="Coil" />
+          <ScalarProperty Name="Wcoil" ColumnName="Wcoil" />
+          <ScalarProperty Name="Reel" ColumnName="Reel" />
+          <ScalarProperty Name="Wreel" ColumnName="Wreel" />
+          <ScalarProperty Name="Wsum" ColumnName="Wsum" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Load" ColumnName="Load" />
+          <ScalarProperty Name="Type_Status" ColumnName="Type_Status" />
+          <ScalarProperty Name="Customer_Ref" ColumnName="Customer_Ref" />
+          <ScalarProperty Name="Shipping_Name" ColumnName="Shipping_Name" />
+          <ScalarProperty Name="Packing_List_No" ColumnName="Packing_List_No" />
+          <ScalarProperty Name="Remark1" ColumnName="Remark1" />
+          <ScalarProperty Name="PO_NO" ColumnName="PO_NO" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="Delivery_Date" ColumnName="Delivery_Date" />
+          <ScalarProperty Name="TotalW" ColumnName="TotalW" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="MAWB_No" ColumnName="MAWB_No" />
+          <ScalarProperty Name="HAWB_No" ColumnName="HAWB_No" />
+          <ScalarProperty Name="Booking_No" ColumnName="Booking_No" />
+          <ScalarProperty Name="OriginLInputTel" ColumnName="OriginLInputTel" />
+          <ScalarProperty Name="DestinationTel" ColumnName="DestinationTel" />
+          <ScalarProperty Name="Loading_Location" ColumnName="Loading_Location" />
+          <ScalarProperty Name="Contact_Loading_Location_Tel" ColumnName="Contact_Loading_Location_Tel" />
+          <ScalarProperty Name="Contact_Person" ColumnName="Contact_Person" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

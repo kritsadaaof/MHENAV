@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<section class="site-section">
+    <div class="container">
+        <h3 class="mb-1 text-center">นำเข้าข้อมูลการวางแผน</h3>
+        <h6 class="text-center" style="color:red"><i>*เลือกไฟล์ Excel เพื่อนำเข้าข้อมูล</i></h6>
+        <div class="row">
+            <div class="col-lg-4 mb-5">
+
+            </div>
+
+
+
+            <div class="col-lg-4 p-4 border rounded">
+                @using (Html.BeginForm("Index", "Import", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "return myFunction()" }))
+                {
+
+
+                    <div class="form-horizontal">
+
+                        <div class="form-group">
+                            <div class="control-label col-md-2" hidden>Excel:</div>
+                            <div class="col-md-10">
+                                <input type="file" id="upload" name="upload" class="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-10">
+                                @if (ViewBag.Message == "N")
+                                {
+                                    <span style="color:red;">
+                                        กรุณาเลือกไฟล์ Upload
+                                    </span>}
+                                @if (ViewBag.Message == "S")
+                                {
+                                    <span style="color:green;">
+                                        อัพโหลดข้อมูลสำเร็จ
+                                    </span>}
+                                @if (ViewBag.Message == "E")
+                                {
+                                    <span style="color:red;">
+                                        เลือกไฟล์ xls , xlxs เท่านั้น
+                                    </span>}
+                                @if (ViewBag.Message == "ER")
+                                {
+                                    <span style="color:red;">
+                                        ข้อมูลในแถวไม่ถูกต้อง
+                                    </span>}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Upload" id="btnSubmit" class="btn btn-primary" /><br /><br />
+                                <!--  <a href="~/Doc/Master_Item.csv" style="color:green" class="fa fa-file-excel"><i style="color:blue"> Download Template</i></a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                }
+               
+            </div>
+            <div class="col-lg-4 mb-5">
+
+            </div>
+        </div>
+    </div>
+</section>
+
