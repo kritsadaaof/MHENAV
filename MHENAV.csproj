@@ -633,7 +633,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\moment\moment-with-locales.min.js.map" />
     <Content Include="Scripts\moment\moment.min.js.map" />
-    <Content Include="Views\Import\Index.cshtml" />
+    <Content Include="Views\Import\Import.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

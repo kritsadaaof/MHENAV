@@ -20,13 +20,13 @@ namespace MHENAV.Controllers
     {
         private Web_MMLNAVEntities DbFile = new Web_MMLNAVEntities();
         // GET: Import
-        public ActionResult Index()
+        public ActionResult Import()
         {
             return View();
         }
         [HttpPost]
         // [ValidateAntiForgeryToken]
-        public ActionResult Index(HttpPostedFileBase upload)
+        public ActionResult Import(HttpPostedFileBase upload)
         {
 
             if (ModelState.IsValid)
