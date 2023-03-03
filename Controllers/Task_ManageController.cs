@@ -23,7 +23,7 @@ namespace MHENAV.Controllers
 
         public ActionResult PrintViewToPdf(string id)//, string MACH, string QTY_UNTRY)
         {
-            var report = new PartialViewAsPdf("~/Views/Task_Manage/Index.cshtml", DbFile.W_MHE_TR_Entries.Where(a => a.ID.Equals(id)).OrderByDescending(a => a.ID).FirstOrDefault())
+            var report = new PartialViewAsPdf("~/Views/Task_Manage/FormPrint.cshtml", DbFile.W_MHE_TR_Entries.Where(a => a.ID.Equals(id)).OrderByDescending(a => a.ID).FirstOrDefault())
             {
                 PageSize = Rotativa.Options.Size.A4,
                 PageOrientation = Rotativa.Options.Orientation.Portrait,

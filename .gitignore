@@ -1,0 +1,11 @@
+
+.vs/MHENAV/v16/.suo
+bin/MHENAV.dll
+bin/MHENAV.dll.config
+bin/MHENAV.pdb
+Controllers/Task_ManageController.cs
+obj/Debug/MHENAV.csproj.CoreCompileInputs.cache
+obj/Debug/MHENAV.csproj.FileListAbsolute.txt
+obj/Debug/MHENAV.csprojAssemblyReference.cache
+obj/Debug/MHENAV.dll
+obj/Debug/MHENAV.pdb

@@ -134,3 +134,4 @@ C:\Users\admin\Desktop\Master\MMLogistic\MHE_NAV\obj\Debug\MHENAV.csproj.CoreCom
 C:\Users\admin\Desktop\Master\MMLogistic\MHE_NAV\obj\Debug\MHENAV.csproj.CopyComplete
 C:\Users\admin\Desktop\Master\MMLogistic\MHE_NAV\obj\Debug\MHENAV.dll
 C:\Users\admin\Desktop\Master\MMLogistic\MHE_NAV\obj\Debug\MHENAV.pdb
+C:\Users\admin\Desktop\Master\MMLogistic\MHE_NAV\bin\Rotativa.dll
