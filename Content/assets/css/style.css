@@ -5685,17 +5685,17 @@ b, sup, sub, u, del {
     }
 
         .main-header .main-menu ul li a {
-            color: #264247;
+            color: white;
             font-family: "Barlow Condensed";
             font-weight: 500;
-            padding: 39px 19px;
+              padding: 5px 5px; 
             display: block;
-            font-size: 16px;
+            font-size: 14px;
             -webkit-transition: .3s;
             -moz-transition: .3s;
             -o-transition: .3s;
             transition: .3s;
-            text-transform: uppercase
+            /*   text-transform: uppercase */
         }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {

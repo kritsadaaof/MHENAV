@@ -72,21 +72,28 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="header-info-right f-right">
-                                    <ul class="header-social">
-
-                                        <li><a href="~/RequestTruck/Overview"><i class="fab">[Overview JOB]</i></a></li>
-                                        <li><a href="~/Import/Index"><i class="fab">[Upload Plan]</i></a></li>
-                                        <li><a href="~/RequestTruck/RequestTruck"><i class="fab">[Grop Request By CS]</i></a></li>
-                                      </ul>
-                                </div>
+                                <div class="main-menu f-right d-none d-lg-block"> 
+                                    <ul id="navigation">
+                                        <li><a href="#">[Overview JOB]</a></li>
+                                        <li><a href="~/Import/Import">[Upload Plan]</a></li>
+                                        <li>
+                                            <a href="~/Home/Index">[Manage Request By Admin]</a>
+                                            <ul class="submenu">
+                                                <li><a href="#">สร้าง Work order</a></li>
+                                                <li><a href="#">เพิ่มรายการปฏิบัติงาน</a></li>
+                                                <li><a href="#">ปริ้นใบปฏิบัติงาน</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">[ค้นหา]</a></li>
+                                    </ul> 
+                                </div> 
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="header-bottom  header-sticky">
                     <div class="container">
-                        <div class="row align-items-center"hidden>
+                        <div class="row align-items-center" hidden>
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-3 col-xs-3 col-sm-3">
                                 <div class="logo mt-1 row">
@@ -128,7 +135,7 @@
         @RenderBody()
         <hr />
         <footer class="text-center">
-        
+
             <p>&copy;  MML Nav By IT @DateTime.Now.Year </p>
         </footer>
     </div>

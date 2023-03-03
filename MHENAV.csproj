@@ -64,6 +64,9 @@
       <HintPath>packages\LINQtoCSV.Excel.1.0.1\lib\net452\LINQtoCSV.Excel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Rotativa.1.7.4-rc\lib\net45\Rotativa.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
@@ -145,6 +148,7 @@
     <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImportController.cs" />
+    <Compile Include="Controllers\Task_ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -487,6 +491,10 @@
       <DependentUpon>DB_WEB.edmx</DependentUpon>
       <LastGenOutput>DB_WEB.cs</LastGenOutput>
     </Content>
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\assets\bootstrap-theme.css.map" />
@@ -594,6 +602,7 @@
     <Content Include="Models\DB_WEB.edmx.diagram">
       <DependentUpon>DB_WEB.edmx</DependentUpon>
     </Content>
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\CheckUser\js_CheckUser.js" />
     <Content Include="Scripts\Home\js_Approve.js" />
@@ -634,6 +643,8 @@
     <Content Include="Scripts\moment\moment-with-locales.min.js.map" />
     <Content Include="Scripts\moment\moment.min.js.map" />
     <Content Include="Views\Import\Import.cshtml" />
+    <Content Include="Views\Task_Manage\addTask.cshtml" />
+    <Content Include="Views\Task_Manage\FormPrint.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
