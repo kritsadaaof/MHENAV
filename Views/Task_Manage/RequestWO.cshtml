@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "RequestWO";
+}
+@Scripts.Render("~/RequestWO/js")
+
+<script src="~/Scripts/moment.js" temp_src="moment.js"></script><!-- Moment แปลงวันที่และเวลา-->
+<style>
+    .customers {
+        font-family: Cambria, Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        .customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 4px;
+        }
+
+
+        .customers tr:hover {
+            background-color: #ddd;
+        }
+
+        .customers th {
+            padding-top: 6px;
+            padding-bottom: 2px;
+            text-align: left;
+            color: black;
+            background-color: #f2f2f2;
+        }
+</style>
+<div class="container mt-2">
+    <div class="jumbotron col-md-12 col-xs-12 col-sm-12 mt-1">
+        <div style="text-align:center;"><p class="lead text-muted" style="font-family: Cambria;">Request Truck</p></div>
+
+
+        <div class="container  mt-1">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="table-responsive mg-t-10">
+                        <table class="table table-bordered table-hover table-striped Text customers" id="tab_logic">
+
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Date</th>
+                                    <th>Task Id</th>
+                                    <th>Time</th>
+                                    <th>Model</th>
+                                    <th>Vehicle</th>
+                                    <th>Origin</th>
+                                    <th>Destination</th>
+                                    <th>Product</th>
+                                    <th hidden>Status</th>
+                                    <th>#</th>
+                                    <th>More</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <button id="CreateJob" class="btn btn-primary button button1">ส่งงาน</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

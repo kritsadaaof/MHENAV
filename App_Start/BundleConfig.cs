@@ -25,6 +25,18 @@ namespace MHENAV
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+            bundles.Add(new ScriptBundle("~/Task_Index/js").Include(
+                     "~/Scripts/Home/js_Index.js"));
+
+
+            bundles.Add(new ScriptBundle("~/RequestWO/js").Include(
+                     "~/Scripts/RequestWork/js_RequestWO.js"));
+
+            //js Loading
+            bundles.Add(new ScriptBundle("~/Loading/js").Include(
+                          "~/Scripts/Loading/js_loading.js"));
         }
     }
 }

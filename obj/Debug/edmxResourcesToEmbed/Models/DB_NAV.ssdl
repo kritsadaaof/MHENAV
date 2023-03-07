@@ -1,5 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MMLogisticsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MM Logistics CO_, LTD_$Resource Planning">
+    <Key>
+      <PropertyRef Name="No_" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Type" Type="int" Nullable="false" />
+    <Property Name="Resource Planning Category" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Employee No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="License Plate No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Mileage" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Last Work Order Update" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Initial Mileage" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Initial Date" Type="datetime" Nullable="false" />
+    <Property Name="Vehicle Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Vehicle Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Container Type" Type="int" Nullable="false" />
+    <Property Name="Allow to have Trailer" Type="tinyint" Nullable="false" />
+    <Property Name="Serial Number" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="Internal Equipment No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Warehouse Type" Type="int" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Total Area" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Available Area" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Working Hour" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Initial Hour" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Position" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Position ID" Type="int" Nullable="false" />
+    <Property Name="Position Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="Tax ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Shortcut Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Shortcut Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Transport Province" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Transport Company" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Transport Location" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Classis No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Engne No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="CC" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Fuel" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Weight" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Mobile ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Active Mobile ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Unit Id" Type="int" Nullable="false" />
+    <Property Name="Unit Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Job Grade" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Job Family" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Personnel Area Id" Type="int" Nullable="false" />
+    <Property Name="Personnel Area Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Contact Id" Type="int" Nullable="false" />
+    <Property Name="Company" Type="int" Nullable="false" />
+    <Property Name="Last Mileage" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Picture" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Truck Status" Type="int" Nullable="false" />
+    <Property Name="FA No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="UID" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Ref_ MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Fuel Tank Capacity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="Useful Life" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+    <Property Name="MHE Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="MM Logistics CO_, LTD_$Temp Request">
     <Key>
       <PropertyRef Name="Request ID" />
@@ -101,8 +166,15 @@
     <Property Name="Loading_Location" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Contact_Loading_Location_Tel" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Contact_Person" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Truck MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Driver1 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Signaler1 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Driver2 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Signaler2 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="MHE Approve Status" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityContainer Name="MMLogisticsModelStoreContainer">
+    <EntitySet Name="MM Logistics CO_, LTD_$Resource Planning" EntityType="Self.MM Logistics CO_, LTD_$Resource Planning" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MM Logistics CO_, LTD_$Temp Request" EntityType="Self.MM Logistics CO_, LTD_$Temp Request" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

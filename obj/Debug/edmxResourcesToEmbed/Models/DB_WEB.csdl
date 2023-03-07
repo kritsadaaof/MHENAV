@@ -73,6 +73,26 @@
     <Property Name="Import_Entry_Declaration" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
     <Property Name="CheckTypeBU" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="DateNow" Type="DateTime" Precision="7" />
+    <Property Name="Start_Time" Type="Time" Precision="7" />
+    <Property Name="End_Time" Type="Time" Precision="7" />
+    <Property Name="Company" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Contract_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Vehicle_SN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="From_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="To_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Requester" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Contact_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Driver" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Signaler" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Driver_2" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Signaler_2" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Approval_Status" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Approver_Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Shift" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="J_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="Web_MMLNAVEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" />

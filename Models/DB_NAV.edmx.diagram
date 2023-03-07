@@ -6,6 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="4eef9d12c63a4c44bf79b3fe68204d6d" Name="Diagram1" ZoomLevel="26">
         <EntityTypeShape EntityType="MMLogisticsModel.MM_Logistics_CO___LTD__Temp_Request" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MMLogisticsModel.MM_Logistics_CO___LTD__Resource_Planning" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

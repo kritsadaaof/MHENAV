@@ -81,6 +81,26 @@
     <Property Name="Import_Entry_Declaration" Type="nvarchar" MaxLength="255" />
     <Property Name="CheckTypeBU" Type="nvarchar" MaxLength="10" />
     <Property Name="DateNow" Type="datetime2" Precision="7" />
+    <Property Name="Start_Time" Type="time" Precision="7" />
+    <Property Name="End_Time" Type="time" Precision="7" />
+    <Property Name="Company" Type="nvarchar" MaxLength="30" />
+    <Property Name="Model" Type="nvarchar" MaxLength="30" />
+    <Property Name="Contract_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="Vehicle_SN" Type="nvarchar" MaxLength="20" />
+    <Property Name="From_Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="To_Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="Requester" Type="nvarchar" MaxLength="20" />
+    <Property Name="Contact_Number" Type="nvarchar" MaxLength="20" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="Driver" Type="nvarchar" MaxLength="30" />
+    <Property Name="Signaler" Type="nvarchar" MaxLength="20" />
+    <Property Name="Driver_2" Type="nvarchar" MaxLength="30" />
+    <Property Name="Signaler_2" Type="nvarchar" MaxLength="20" />
+    <Property Name="Approval_Status" Type="nvarchar" MaxLength="20" />
+    <Property Name="Approver_Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="100" />
+    <Property Name="Shift" Type="nvarchar" MaxLength="30" />
+    <Property Name="J_Type" Type="nvarchar" MaxLength="10" />
   </EntityType>
   <EntityContainer Name="Web_MMLNAVModelStoreContainer">
     <EntitySet Name="Group_Time" EntityType="Self.Group_Time" Schema="dbo" store:Type="Tables" />

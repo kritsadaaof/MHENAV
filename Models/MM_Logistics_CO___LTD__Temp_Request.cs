@@ -111,5 +111,11 @@ namespace MHENAV.Models
         public string Loading_Location { get; set; }
         public string Contact_Loading_Location_Tel { get; set; }
         public string Contact_Person { get; set; }
+        public string Truck_MHE_ID { get; set; }
+        public string Driver1_MHE_ID { get; set; }
+        public string Signaler1_MHE_ID { get; set; }
+        public string Driver2_MHE_ID { get; set; }
+        public string Signaler2_MHE_ID { get; set; }
+        public string MHE_Approve_Status { get; set; }
     }
 }

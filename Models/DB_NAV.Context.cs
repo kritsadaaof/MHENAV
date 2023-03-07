@@ -26,5 +26,6 @@ namespace MHENAV.Models
         }
     
         public DbSet<MM_Logistics_CO___LTD__Temp_Request> MM_Logistics_CO___LTD__Temp_Request { get; set; }
+        public DbSet<MM_Logistics_CO___LTD__Resource_Planning> MM_Logistics_CO___LTD__Resource_Planning { get; set; }
     }
 }

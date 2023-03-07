@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Mvc; 
+using System.Web.Mvc;
 using LINQtoCSV;
 using System.IO;
 using System.Configuration;
@@ -12,13 +12,14 @@ using System.Data.SqlClient;
 using DataRow = System.Data.DataRow;
 using System.Data.Entity;
 using ExcelDataReader;
-using MHENAV.Models; 
+using MHENAV.Models;
 
 namespace MHENAV.Controllers
 {
     public class ImportController : Controller
     {
-        private Web_MMLNAVEntities DbFile = new Web_MMLNAVEntities();
+        private Web_MMLNAVEntities DbFile_Web = new Web_MMLNAVEntities();
+        private MMLogisticsEntities DbFile_NAV = new MMLogisticsEntities();
         // GET: Import
         public ActionResult Import()
         {
@@ -62,11 +63,18 @@ namespace MHENAV.Controllers
                         int rowcount = reader.RowCount;
                         DataTable dt = new DataTable();
                         dt = reader.AsDataSet().Tables[0];
+                        var data = (from Ms_M in DbFile_Web.W_MHE_TR_Entries select new { Ms_M.Req_No }).ToList();
+                    
                         for (int row_ = 1; row_ < dt.Rows.Count; row_++)
                         {
-                            DbFile.W_MHE_TR_Entries.Add(GetMaster_ItemFromExcelRow(dt.Rows[row_]));
+                           var RQ =  dt.Rows[row_][0].ToString();
+                           var Check = data.Where(a => a.Req_No == RQ).FirstOrDefault();
+                            if (Check == null)
+                            {
+                                DbFile_Web.W_MHE_TR_Entries.Add(GetMaster_ItemFromExcelRow(dt.Rows[row_]));
+                            }
                         }
-                        DbFile.SaveChanges();
+                        DbFile_Web.SaveChanges();
                         ViewBag.Message = "S";
                     }
                     catch
@@ -84,37 +92,34 @@ namespace MHENAV.Controllers
         private static DataTable GetSchemaFromExcel(OleDbConnection excelOledbConnection)
         {
             return excelOledbConnection.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-        }
-
+        } 
         //Convert each datarow into Master_Item object
         private W_MHE_TR_Entries GetMaster_ItemFromExcelRow(DataRow row)
-        {
-
-            // DateTime dt_Entry_Date = Convert.ToDateTime(row[29]).AddYears(-543);
-          //  var Entry_Date = row[29].ToString().Substring(0, row[29].ToString().Length - 8);
-            //DateTime dt_Posting_Date = Convert.ToDateTime(row[9]).AddYears(-543);
-         //   var Posting_Date = row[9].ToString().Substring(0, row[9].ToString().Length - 8);
-         //   DateTime Mat_MFG = row[66].ToString() == "" ? DateTime.Now : Convert.ToDateTime(row[66]);//.AddYears(-543);
-         //   DateTime Mat_Exp = row[67].ToString() == "" ? DateTime.Now : Convert.ToDateTime(row[67]);//.AddYears(-543);
-            /*  if (dt_Entry_Date.Year > DateTime.Now.Year)
-              {
-                  dt_Entry_Date = Convert.ToDateTime(row[29]).AddYears(-543); 
-              }
-              if (dt_Posting_Date.Year > DateTime.Now.Year)
-              { 
-                  dt_Posting_Date = Convert.ToDateTime(row[9]).AddYears(-543);
-              }
-            */
+        {             
             W_MHE_TR_Entries MI = new W_MHE_TR_Entries();
+            MI.Timestamp = DateTime.Now;
             MI.Req_No = row[0].ToString();
             MI.Request_Date = Convert.ToDateTime(row[1].ToString());
-            
-   //         MI.Entry_Date = Entry_Date;// dt_Entry_Date.ToString().Substring(0, dt_Entry_Date.ToString().Length - 8);
-   //         MI.Entry_Time = row[30].ToString().Substring(row[30].ToString().Length - 8, 8);
-    //    MI.MFGDate = row[66].ToString() == "" ? null : Mat_MFG.ToString().Substring(0, Mat_MFG.ToString().Length - 8);
-    //        MI.EXPDate = row[67].ToString() == "" ? null : Mat_Exp.ToString().Substring(0, Mat_Exp.ToString().Length - 8);
-     //       MI.LOT = row[68].ToString() == "" ? null : row[68].ToString();
-     //       MI.Date = DateTime.Now;//*/
+            MI.Shift = row[2].ToString();
+            MI.Start_Time = TimeSpan.Parse(Convert.ToDateTime(row[3]).ToString("HH:mm:ss"));
+            MI.End_Time = TimeSpan.Parse(Convert.ToDateTime(row[4]).ToString("HH:mm:ss"));
+            MI.Company = row[5].ToString();
+            MI.Model = row[6].ToString();
+            MI.Contract_Type = row[7].ToString();
+            MI.Vehicle_SN = row[8].ToString();
+            MI.From_Location = row[9].ToString();
+            MI.To_Location = row[10].ToString();
+            MI.Requester = row[11].ToString();
+            MI.Contact_Number = row[12].ToString();
+            MI.Description = row[13].ToString();
+            MI.Driver = row[14].ToString();
+            MI.Signaler = row[15].ToString();
+            MI.Driver_2 = row[16].ToString();
+            MI.Signaler_2 = row[17].ToString();
+            MI.Approval_Status = row[18].ToString();
+            MI.Approver_Remark = row[19].ToString();
+            MI.Note = row[20].ToString();
+            MI.J_Type = "MHE";
 
             return MI;// new Master_Item
 

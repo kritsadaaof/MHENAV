@@ -83,5 +83,25 @@ namespace MHENAV.Models
         public string Import_Entry_Declaration { get; set; }
         public string CheckTypeBU { get; set; }
         public Nullable<System.DateTime> DateNow { get; set; }
+        public Nullable<System.TimeSpan> Start_Time { get; set; }
+        public Nullable<System.TimeSpan> End_Time { get; set; }
+        public string Company { get; set; }
+        public string Model { get; set; }
+        public string Contract_Type { get; set; }
+        public string Vehicle_SN { get; set; }
+        public string From_Location { get; set; }
+        public string To_Location { get; set; }
+        public string Requester { get; set; }
+        public string Contact_Number { get; set; }
+        public string Description { get; set; }
+        public string Driver { get; set; }
+        public string Signaler { get; set; }
+        public string Driver_2 { get; set; }
+        public string Signaler_2 { get; set; }
+        public string Approval_Status { get; set; }
+        public string Approver_Remark { get; set; }
+        public string Note { get; set; }
+        public string Shift { get; set; }
+        public string J_Type { get; set; }
     }
 }

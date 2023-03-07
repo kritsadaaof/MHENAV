@@ -4,6 +4,12 @@
     <EntitySetMapping Name="MM_Logistics_CO___LTD__Temp_Request">
       <EntityTypeMapping TypeName="MMLogisticsModel.MM_Logistics_CO___LTD__Temp_Request">
         <MappingFragment StoreEntitySet="MM Logistics CO_, LTD_$Temp Request">
+          <ScalarProperty Name="MHE_Approve_Status" ColumnName="MHE Approve Status" />
+          <ScalarProperty Name="Signaler2_MHE_ID" ColumnName="Signaler2 MHE ID" />
+          <ScalarProperty Name="Driver2_MHE_ID" ColumnName="Driver2 MHE ID" />
+          <ScalarProperty Name="Signaler1_MHE_ID" ColumnName="Signaler1 MHE ID" />
+          <ScalarProperty Name="Driver1_MHE_ID" ColumnName="Driver1 MHE ID" />
+          <ScalarProperty Name="Truck_MHE_ID" ColumnName="Truck MHE ID" />
           <ScalarProperty Name="timestamp" ColumnName="timestamp" />
           <ScalarProperty Name="Request_ID" ColumnName="Request ID" />
           <ScalarProperty Name="Job_Order_No_" ColumnName="Job Order No_" />
@@ -101,6 +107,72 @@
           <ScalarProperty Name="Loading_Location" ColumnName="Loading_Location" />
           <ScalarProperty Name="Contact_Loading_Location_Tel" ColumnName="Contact_Loading_Location_Tel" />
           <ScalarProperty Name="Contact_Person" ColumnName="Contact_Person" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MM_Logistics_CO___LTD__Resource_Planning">
+      <EntityTypeMapping TypeName="MMLogisticsModel.MM_Logistics_CO___LTD__Resource_Planning">
+        <MappingFragment StoreEntitySet="MM Logistics CO_, LTD_$Resource Planning">
+          <ScalarProperty Name="MHE_Name" ColumnName="MHE Name" />
+          <ScalarProperty Name="Useful_Life" ColumnName="Useful Life" />
+          <ScalarProperty Name="Fuel_Tank_Capacity" ColumnName="Fuel Tank Capacity" />
+          <ScalarProperty Name="Ref__MHE_ID" ColumnName="Ref_ MHE ID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="FA_No_" ColumnName="FA No_" />
+          <ScalarProperty Name="Truck_Status" ColumnName="Truck Status" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Last_Mileage" ColumnName="Last Mileage" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Contact_Id" ColumnName="Contact Id" />
+          <ScalarProperty Name="Personnel_Area_Name" ColumnName="Personnel Area Name" />
+          <ScalarProperty Name="Personnel_Area_Id" ColumnName="Personnel Area Id" />
+          <ScalarProperty Name="Job_Family" ColumnName="Job Family" />
+          <ScalarProperty Name="Job_Grade" ColumnName="Job Grade" />
+          <ScalarProperty Name="Unit_Name" ColumnName="Unit Name" />
+          <ScalarProperty Name="Unit_Id" ColumnName="Unit Id" />
+          <ScalarProperty Name="Active_Mobile_ID" ColumnName="Active Mobile ID" />
+          <ScalarProperty Name="Mobile_ID" ColumnName="Mobile ID" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+          <ScalarProperty Name="CC" ColumnName="CC" />
+          <ScalarProperty Name="Engne_No_" ColumnName="Engne No_" />
+          <ScalarProperty Name="Classis_No_" ColumnName="Classis No_" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Transport_Location" ColumnName="Transport Location" />
+          <ScalarProperty Name="Transport_Company" ColumnName="Transport Company" />
+          <ScalarProperty Name="Transport_Province" ColumnName="Transport Province" />
+          <ScalarProperty Name="Shortcut_Dimension_2_Code" ColumnName="Shortcut Dimension 2 Code" />
+          <ScalarProperty Name="Shortcut_Dimension_1_Code" ColumnName="Shortcut Dimension 1 Code" />
+          <ScalarProperty Name="Tax_ID" ColumnName="Tax ID" />
+          <ScalarProperty Name="Position_Name" ColumnName="Position Name" />
+          <ScalarProperty Name="Position_ID" ColumnName="Position ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Initial_Hour" ColumnName="Initial Hour" />
+          <ScalarProperty Name="Working_Hour" ColumnName="Working Hour" />
+          <ScalarProperty Name="Available_Area" ColumnName="Available Area" />
+          <ScalarProperty Name="Total_Area" ColumnName="Total Area" />
+          <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Warehouse_Type" ColumnName="Warehouse Type" />
+          <ScalarProperty Name="Internal_Equipment_No_" ColumnName="Internal Equipment No_" />
+          <ScalarProperty Name="Serial_Number" ColumnName="Serial Number" />
+          <ScalarProperty Name="Allow_to_have_Trailer" ColumnName="Allow to have Trailer" />
+          <ScalarProperty Name="Container_Type" ColumnName="Container Type" />
+          <ScalarProperty Name="Vehicle_Model" ColumnName="Vehicle Model" />
+          <ScalarProperty Name="Vehicle_Brand" ColumnName="Vehicle Brand" />
+          <ScalarProperty Name="Initial_Date" ColumnName="Initial Date" />
+          <ScalarProperty Name="Initial_Mileage" ColumnName="Initial Mileage" />
+          <ScalarProperty Name="Last_Work_Order_Update" ColumnName="Last Work Order Update" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+          <ScalarProperty Name="License_Plate_No_" ColumnName="License Plate No_" />
+          <ScalarProperty Name="Employee_No_" ColumnName="Employee No_" />
+          <ScalarProperty Name="Resource_Planning_Category" ColumnName="Resource Planning Category" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="No_" ColumnName="No_" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

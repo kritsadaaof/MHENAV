@@ -4,6 +4,26 @@
     <EntitySetMapping Name="W_MHE_TR_Entries">
       <EntityTypeMapping TypeName="Web_MMLNAVModel.W_MHE_TR_Entries">
         <MappingFragment StoreEntitySet="W_MHE_TR_Entries">
+          <ScalarProperty Name="J_Type" ColumnName="J_Type" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Approver_Remark" ColumnName="Approver_Remark" />
+          <ScalarProperty Name="Approval_Status" ColumnName="Approval_Status" />
+          <ScalarProperty Name="Signaler_2" ColumnName="Signaler_2" />
+          <ScalarProperty Name="Driver_2" ColumnName="Driver_2" />
+          <ScalarProperty Name="Signaler" ColumnName="Signaler" />
+          <ScalarProperty Name="Driver" ColumnName="Driver" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Contact_Number" ColumnName="Contact_Number" />
+          <ScalarProperty Name="Requester" ColumnName="Requester" />
+          <ScalarProperty Name="To_Location" ColumnName="To_Location" />
+          <ScalarProperty Name="From_Location" ColumnName="From_Location" />
+          <ScalarProperty Name="Vehicle_SN" ColumnName="Vehicle_SN" />
+          <ScalarProperty Name="Contract_Type" ColumnName="Contract_Type" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="End_Time" ColumnName="End_Time" />
+          <ScalarProperty Name="Start_Time" ColumnName="Start_Time" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Customer" ColumnName="Customer" />
           <ScalarProperty Name="Contract_No" ColumnName="Contract_No" />

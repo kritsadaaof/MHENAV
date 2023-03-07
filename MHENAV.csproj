@@ -185,6 +185,9 @@
     <Compile Include="Models\Group_Time.cs">
       <DependentUpon>DB_WEB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MM_Logistics_CO___LTD__Resource_Planning.cs">
+      <DependentUpon>DB_NAV.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\MM_Logistics_CO___LTD__Temp_Request.cs">
       <DependentUpon>DB_NAV.tt</DependentUpon>
     </Compile>
@@ -605,7 +608,7 @@
     <Content Include="App_Browsers\qt.browser" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\CheckUser\js_CheckUser.js" />
-    <Content Include="Scripts\Home\js_Approve.js" />
+    <Content Include="Scripts\Home\js_Index.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -621,11 +624,7 @@
     <Content Include="Scripts\moment\moment-with-locales.min.js" />
     <Content Include="Scripts\moment\moment.js" />
     <Content Include="Scripts\moment\moment.min.js" />
-    <Content Include="Scripts\RequestJob\js_RequestJob.js" />
-    <Content Include="Scripts\RequestJob\js_RequestJob1.js" />
-    <Content Include="Scripts\RequestTruck\js_Overview.js" />
-    <Content Include="Scripts\RequestTruck\js_RequestTruck.js" />
-    <Content Include="Scripts\RequestWork\js_RequestWork.js" />
+    <Content Include="Scripts\RequestWork\js_RequestWO.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -645,6 +644,7 @@
     <Content Include="Views\Import\Import.cshtml" />
     <Content Include="Views\Task_Manage\addTask.cshtml" />
     <Content Include="Views\Task_Manage\FormPrint.cshtml" />
+    <Content Include="Views\Task_Manage\RequestWO.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

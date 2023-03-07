@@ -101,8 +101,80 @@
     <Property Name="Loading_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Contact_Loading_Location_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Contact_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Truck_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Driver1_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Signaler1_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Driver2_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Signaler2_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MHE_Approve_Status" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="MMLogisticsEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="MM_Logistics_CO___LTD__Temp_Request" EntityType="Self.MM_Logistics_CO___LTD__Temp_Request" />
+    <EntitySet Name="MM_Logistics_CO___LTD__Resource_Planning" EntityType="MMLogisticsModel.MM_Logistics_CO___LTD__Resource_Planning" />
   </EntityContainer>
+  <EntityType Name="MM_Logistics_CO___LTD__Resource_Planning">
+    <Key>
+      <PropertyRef Name="No_" />
+    </Key>
+    <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" Nullable="false" />
+    <Property Name="Resource_Planning_Category" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="License_Plate_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Mileage" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Last_Work_Order_Update" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Initial_Mileage" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Initial_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Vehicle_Brand" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Vehicle_Model" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Container_Type" Type="Int32" Nullable="false" />
+    <Property Name="Allow_to_have_Trailer" Type="Byte" Nullable="false" />
+    <Property Name="Serial_Number" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Name="Internal_Equipment_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Warehouse_Type" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Total_Area" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Available_Area" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Working_Hour" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Initial_Hour" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Position" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Position_ID" Type="Int32" Nullable="false" />
+    <Property Name="Position_Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Tax_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Shortcut_Dimension_1_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Shortcut_Dimension_2_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Transport_Province" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Transport_Company" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Transport_Location" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Classis_No_" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Engne_No_" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CC" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Fuel" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Mobile_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Active_Mobile_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Unit_Id" Type="Int32" Nullable="false" />
+    <Property Name="Unit_Name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Job_Grade" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Job_Family" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Personnel_Area_Id" Type="Int32" Nullable="false" />
+    <Property Name="Personnel_Area_Name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Contact_Id" Type="Int32" Nullable="false" />
+    <Property Name="Company" Type="Int32" Nullable="false" />
+    <Property Name="Last_Mileage" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+    <Property Name="Picture" Type="Guid" Nullable="false" />
+    <Property Name="Truck_Status" Type="Int32" Nullable="false" />
+    <Property Name="FA_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UID" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Ref__MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Fuel_Tank_Capacity" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Useful_Life" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="MHE_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

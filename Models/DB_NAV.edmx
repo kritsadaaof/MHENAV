@@ -4,7 +4,72 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MMLogisticsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MMLogisticsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MM Logistics CO_, LTD_$Resource Planning">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Type" Type="int" Nullable="false" />
+          <Property Name="Resource Planning Category" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Employee No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="License Plate No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Mileage" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Last Work Order Update" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Initial Mileage" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Initial Date" Type="datetime" Nullable="false" />
+          <Property Name="Vehicle Brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Vehicle Model" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Container Type" Type="int" Nullable="false" />
+          <Property Name="Allow to have Trailer" Type="tinyint" Nullable="false" />
+          <Property Name="Serial Number" Type="nvarchar" MaxLength="64" Nullable="false" />
+          <Property Name="Internal Equipment No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Warehouse Type" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address 2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Total Area" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Available Area" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Working Hour" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Initial Hour" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Position" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Position ID" Type="int" Nullable="false" />
+          <Property Name="Position Name" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Tax ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Shortcut Dimension 1 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Shortcut Dimension 2 Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Transport Province" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Transport Company" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Transport Location" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Color" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Classis No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Engne No_" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CC" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Fuel" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Weight" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Mobile ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Active Mobile ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Unit Id" Type="int" Nullable="false" />
+          <Property Name="Unit Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Job Grade" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Job Family" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Personnel Area Id" Type="int" Nullable="false" />
+          <Property Name="Personnel Area Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Contact Id" Type="int" Nullable="false" />
+          <Property Name="Company" Type="int" Nullable="false" />
+          <Property Name="Last Mileage" Type="int" Nullable="false" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Picture" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Truck Status" Type="int" Nullable="false" />
+          <Property Name="FA No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="UID" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Ref_ MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Fuel Tank Capacity" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="Useful Life" Type="decimal" Precision="38" Scale="20" Nullable="false" />
+          <Property Name="MHE Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="MM Logistics CO_, LTD_$Temp Request">
           <Key>
             <PropertyRef Name="Request ID" />
@@ -106,12 +171,18 @@
           <Property Name="Loading_Location" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Contact_Loading_Location_Tel" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Contact_Person" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Truck MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Driver1 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Signaler1 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Driver2 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Signaler2 MHE ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="MHE Approve Status" Type="nvarchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityContainer Name="MMLogisticsModelStoreContainer">
+          <EntitySet Name="MM Logistics CO_, LTD_$Resource Planning" EntityType="Self.MM Logistics CO_, LTD_$Resource Planning" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MM Logistics CO_, LTD_$Temp Request" EntityType="Self.MM Logistics CO_, LTD_$Temp Request" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MMLogisticsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -216,10 +287,82 @@
           <Property Name="Loading_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Contact_Loading_Location_Tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Contact_Person" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Truck_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Driver1_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Signaler1_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Driver2_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Signaler2_MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MHE_Approve_Status" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="MMLogisticsEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="MM_Logistics_CO___LTD__Temp_Request" EntityType="Self.MM_Logistics_CO___LTD__Temp_Request" />
+          <EntitySet Name="MM_Logistics_CO___LTD__Resource_Planning" EntityType="MMLogisticsModel.MM_Logistics_CO___LTD__Resource_Planning" />
         </EntityContainer>
+        <EntityType Name="MM_Logistics_CO___LTD__Resource_Planning">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" Nullable="false" />
+          <Property Name="Resource_Planning_Category" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="License_Plate_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Mileage" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Last_Work_Order_Update" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Initial_Mileage" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Initial_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Vehicle_Brand" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Vehicle_Model" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Container_Type" Type="Int32" Nullable="false" />
+          <Property Name="Allow_to_have_Trailer" Type="Byte" Nullable="false" />
+          <Property Name="Serial_Number" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Internal_Equipment_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Warehouse_Type" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address_2" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Total_Area" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Available_Area" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Working_Hour" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Initial_Hour" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Position" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Position_ID" Type="Int32" Nullable="false" />
+          <Property Name="Position_Name" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Tax_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Shortcut_Dimension_1_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Shortcut_Dimension_2_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Transport_Province" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Transport_Company" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Transport_Location" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Classis_No_" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Engne_No_" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CC" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Fuel" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Weight" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Mobile_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Active_Mobile_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_Id" Type="Int32" Nullable="false" />
+          <Property Name="Unit_Name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Grade" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Job_Family" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Personnel_Area_Id" Type="Int32" Nullable="false" />
+          <Property Name="Personnel_Area_Name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Contact_Id" Type="Int32" Nullable="false" />
+          <Property Name="Company" Type="Int32" Nullable="false" />
+          <Property Name="Last_Mileage" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Picture" Type="Guid" Nullable="false" />
+          <Property Name="Truck_Status" Type="Int32" Nullable="false" />
+          <Property Name="FA_No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UID" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Ref__MHE_ID" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Fuel_Tank_Capacity" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Useful_Life" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="MHE_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -229,6 +372,12 @@
           <EntitySetMapping Name="MM_Logistics_CO___LTD__Temp_Request">
             <EntityTypeMapping TypeName="MMLogisticsModel.MM_Logistics_CO___LTD__Temp_Request">
               <MappingFragment StoreEntitySet="MM Logistics CO_, LTD_$Temp Request">
+                <ScalarProperty Name="MHE_Approve_Status" ColumnName="MHE Approve Status" />
+                <ScalarProperty Name="Signaler2_MHE_ID" ColumnName="Signaler2 MHE ID" />
+                <ScalarProperty Name="Driver2_MHE_ID" ColumnName="Driver2 MHE ID" />
+                <ScalarProperty Name="Signaler1_MHE_ID" ColumnName="Signaler1 MHE ID" />
+                <ScalarProperty Name="Driver1_MHE_ID" ColumnName="Driver1 MHE ID" />
+                <ScalarProperty Name="Truck_MHE_ID" ColumnName="Truck MHE ID" />
                 <ScalarProperty Name="timestamp" ColumnName="timestamp" />
                 <ScalarProperty Name="Request_ID" ColumnName="Request ID" />
                 <ScalarProperty Name="Job_Order_No_" ColumnName="Job Order No_" />
@@ -326,6 +475,72 @@
                 <ScalarProperty Name="Loading_Location" ColumnName="Loading_Location" />
                 <ScalarProperty Name="Contact_Loading_Location_Tel" ColumnName="Contact_Loading_Location_Tel" />
                 <ScalarProperty Name="Contact_Person" ColumnName="Contact_Person" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MM_Logistics_CO___LTD__Resource_Planning">
+            <EntityTypeMapping TypeName="MMLogisticsModel.MM_Logistics_CO___LTD__Resource_Planning">
+              <MappingFragment StoreEntitySet="MM Logistics CO_, LTD_$Resource Planning">
+                <ScalarProperty Name="MHE_Name" ColumnName="MHE Name" />
+                <ScalarProperty Name="Useful_Life" ColumnName="Useful Life" />
+                <ScalarProperty Name="Fuel_Tank_Capacity" ColumnName="Fuel Tank Capacity" />
+                <ScalarProperty Name="Ref__MHE_ID" ColumnName="Ref_ MHE ID" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+                <ScalarProperty Name="FA_No_" ColumnName="FA No_" />
+                <ScalarProperty Name="Truck_Status" ColumnName="Truck Status" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Last_Mileage" ColumnName="Last Mileage" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Contact_Id" ColumnName="Contact Id" />
+                <ScalarProperty Name="Personnel_Area_Name" ColumnName="Personnel Area Name" />
+                <ScalarProperty Name="Personnel_Area_Id" ColumnName="Personnel Area Id" />
+                <ScalarProperty Name="Job_Family" ColumnName="Job Family" />
+                <ScalarProperty Name="Job_Grade" ColumnName="Job Grade" />
+                <ScalarProperty Name="Unit_Name" ColumnName="Unit Name" />
+                <ScalarProperty Name="Unit_Id" ColumnName="Unit Id" />
+                <ScalarProperty Name="Active_Mobile_ID" ColumnName="Active Mobile ID" />
+                <ScalarProperty Name="Mobile_ID" ColumnName="Mobile ID" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+                <ScalarProperty Name="CC" ColumnName="CC" />
+                <ScalarProperty Name="Engne_No_" ColumnName="Engne No_" />
+                <ScalarProperty Name="Classis_No_" ColumnName="Classis No_" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Transport_Location" ColumnName="Transport Location" />
+                <ScalarProperty Name="Transport_Company" ColumnName="Transport Company" />
+                <ScalarProperty Name="Transport_Province" ColumnName="Transport Province" />
+                <ScalarProperty Name="Shortcut_Dimension_2_Code" ColumnName="Shortcut Dimension 2 Code" />
+                <ScalarProperty Name="Shortcut_Dimension_1_Code" ColumnName="Shortcut Dimension 1 Code" />
+                <ScalarProperty Name="Tax_ID" ColumnName="Tax ID" />
+                <ScalarProperty Name="Position_Name" ColumnName="Position Name" />
+                <ScalarProperty Name="Position_ID" ColumnName="Position ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Initial_Hour" ColumnName="Initial Hour" />
+                <ScalarProperty Name="Working_Hour" ColumnName="Working Hour" />
+                <ScalarProperty Name="Available_Area" ColumnName="Available Area" />
+                <ScalarProperty Name="Total_Area" ColumnName="Total Area" />
+                <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Warehouse_Type" ColumnName="Warehouse Type" />
+                <ScalarProperty Name="Internal_Equipment_No_" ColumnName="Internal Equipment No_" />
+                <ScalarProperty Name="Serial_Number" ColumnName="Serial Number" />
+                <ScalarProperty Name="Allow_to_have_Trailer" ColumnName="Allow to have Trailer" />
+                <ScalarProperty Name="Container_Type" ColumnName="Container Type" />
+                <ScalarProperty Name="Vehicle_Model" ColumnName="Vehicle Model" />
+                <ScalarProperty Name="Vehicle_Brand" ColumnName="Vehicle Brand" />
+                <ScalarProperty Name="Initial_Date" ColumnName="Initial Date" />
+                <ScalarProperty Name="Initial_Mileage" ColumnName="Initial Mileage" />
+                <ScalarProperty Name="Last_Work_Order_Update" ColumnName="Last Work Order Update" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+                <ScalarProperty Name="License_Plate_No_" ColumnName="License Plate No_" />
+                <ScalarProperty Name="Employee_No_" ColumnName="Employee No_" />
+                <ScalarProperty Name="Resource_Planning_Category" ColumnName="Resource Planning Category" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
