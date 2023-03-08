@@ -11,7 +11,7 @@
     <title>FormPrint</title>
 
     <style>
-   
+
         .main-container {
             height: 100%;
             margin: 0%;
@@ -23,6 +23,7 @@
           font-size: 12px;
           font-weight: 500;
           color: #1C3F69;
+          /*line-height: 1.5;*/
           margin: 0;
           padding: 0;
         }
@@ -56,41 +57,21 @@
             text-decoration-line: underline;
         }
 
-        table {
+        .table-content {
           border-collapse: collapse;
           width: 100%;
         }
 
-        td, th {
+        .table-content td, th {
           border: 1px solid #ccc;
           text-align: center;
           height: 25px;
         }
 
-        th {
+        .table-content th {
           background-color: #f2f2f2;
           font-size: 12px;
           font-weight: 600;
-        }
-
-        .logo-flax-container {
-            margin-top: 5px;
-            display: flex;
-            justify-content: center;
-            height: 45px;
-        }
-
-        .logo-title {
-            text-align: center;
-            margin-left: 5px;
-            padding: 0%;
-        }
-        .logo-title h1 {
-            margin: 0%;
-        }
-
-        .logo-title p {
-            margin-top: 5px;
         }
 
         .address-container{
@@ -124,36 +105,80 @@
             height: 350px;
         }
 
-        .detail-flex-container {
-            display: flex;
-            justify-content: space-between;
+        .detail-footer-container {
             height: 250px;
         }
 
-        .detail {
-            width: 40%;
-        }
-        .remark {
-            width: 40%;
+        .table-detail-footer {
+            border-collapse: collapse;
+            width: 100%;
         }
 
-        .signature-flex-container {
-            display: flex;
-            justify-content: space-between;
+        .item-left-table-detail-footer {
+            text-align: left;
+            vertical-align: top;
+            width: 60%;
+        }
 
+        .item-right-table-detail-footer {
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .logo-container {
+            margin-top: 5px;
+        }
+
+        .table-header {
+            border-collapse: collapse;
+            margin: auto;
+            text-align: center;
+        }
+
+        .table-detail {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .item-left-table-detail {
+            text-align: left;
+            vertical-align: top;
+            width: 75%;
+        }
+        .item-right-table-detail {
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .signature-container {
+            margin-top: 25%;
+        }
+        .table-signature {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .item-left-table-signature {
+            text-align: left;
+            vertical-align: top;
+            width: 72%;
+        }
+        .item-right-table-signature {
+            text-align: left;
+            vertical-align: top;
         }
     </style>
 </head>
 <body>
     <div class="main-container">
-        <div class="logo-flax-container">
-            <div class="logo">
-                <img src="content/img/MM Logistics.png" alt="" style="width: 80px; height: 34px;">
-            </div>
-            <div class="logo-title">
-                <h1>MM Logistics Co.,Ltd</h1>
-                <p>Tel. : +66(2) 652-0831</p>
-            </div>
+        <div class="logo-container">
+            <table class="table-header">
+                <tr>
+                    <td><img src="~/Content/assets/img/logo/MM Logistics.png" alt="" style="width: 80px; height: 34px;"></td>
+                    <td>
+                        <h1 style="margin: 0;">MM Logistics Co.,Ltd</h1>
+                        <p style="margin-top: 2px;">Tel. : +66(2) 652-0831</p>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="address-container">
             <h2>518/5 MM LOGISTIC CENTER BUILDING 11th FLOOR, PLOENCHIT ROAD, LUMPINEE, PATHUMWAN, BANGKOK 10330</h2>
@@ -165,47 +190,51 @@
             <h1 class="underline">VEHICLE OPERATION TIME SHEET</h1>
         </div>
         <div class="detail-container">
-            <div class="detail-a">
-                <p>
-                    ลูกค้า
-                    <br>Customer:
-                    <span id="Customer_Name">PTTEP (Slick line)</span>
-                </p>
-                <p>
-                    ชนิดรถ
-                    <br>Vehicle Type:
-                    <span id="Vehicle_Type">Trailer Flatbed </span>
-                </p>
-                <p>
-                    หมายเลขรถ/ทะเบียน
-                    <br>No, Car License:
-                    <span id="Number_Car">FB/6</span>
-                </p>
-                <p>
-                    ชื่อพนักงานขับรถ
-                    <br>Driver Name:
-                    <span id="Driver_Name">Samarn/Somsak</span>
-                </p>
-            </div>
-            <div class="detail-b">
-                <p>
-                    เลขที่ No:
-                    <span id="Number">08323</span>
-                </p>
-                <p>
-                    วันที่ Date:
-                    <span id="Data">05/01/23</span>
-                </p>
-                <p>
-                    สถานที่ Place:
-                    <span id="Place">LKU-2J</span>
-                </p>
-                <p>
-                    เบอร์ติดต่อหัวหน้า
-                    <br>Tel. Supervisor:
-                    <span id="Tel_Supervisor">099-999-9999</span>
-                </p>
-            </div>
+            <table class="table-detail">
+                <tr>
+                    <td class="item-left-table-detail">
+                        <p>
+                            ลูกค้า
+                            <br>Customer:
+                            <span id="Customer_Name">PTTEP (Slick line)</span>
+                        </p>
+                        <p>
+                            ชนิดรถ
+                            <br>Vehicle Type:
+                            <span id="Vehicle_Type">Trailer Flatbed </span>
+                        </p>
+                        <p>
+                            หมายเลขรถ/ทะเบียน
+                            <br>No, Car License:
+                            <span id="Number_Car">FB/6</span>
+                        </p>
+                        <p>
+                            ชื่อพนักงานขับรถ
+                            <br>Driver Name:
+                            <span id="Driver_Name">Samarn/Somsak</span>
+                        </p>
+                    </td>
+                    <td class="item-right-table-detail">
+                        <p>
+                            เลขที่ No:
+                            <span id="Number">08323</span>
+                        </p>
+                        <p>
+                            วันที่ Date:
+                            <span id="Data">05/01/23</span>
+                        </p>
+                        <p>
+                            สถานที่ Place:
+                            <span id="Place">LKU-2J</span>
+                        </p>
+                        <p>
+                            เบอร์ติดต่อหัวหน้า
+                            <br>Tel. Supervisor:
+                            <span id="Tel_Supervisor">099-999-9999</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
         </div>
         <div class="table-container">
             <table class="table-content" id="table-content">
@@ -234,35 +263,120 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td>Work 1</td>
+                        <td>Work 1</td>
+                        <td>Work 1</td>
+                        <td>Work 1</td>
+                        <td>Work 1</td>
+                    </tr>
+                    <tr>
+                        <td>Work 2</td>
+                        <td>Work 2</td>
+                        <td>Work 2</td>
+                        <td>Work 2</td>
+                        <td>Work 2</td>
+                    </tr>
+                    <tr>
+                        <td>Work 3</td>
+                        <td>Work 3</td>
+                        <td>Work 3</td>
+                        <td>Work 3</td>
+                        <td>Work 3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: 600; border: none;">
+                            รวมเที่ยว/ชม./ก.ม.<br>
+                            Total Trip/Hour/K.m.
+                        </td>
+                        <td></td>
+                    </tr>
                 </tbody>
             </table>
         </div>
-        <div class="detail-flex-container">
-            <div class="detail">
-                <p>รายละเอียดเพิ่มเติม</p>
-                <p>Detail:</p>
-            </div>
-            <div class="remark">
-                <p>หมายเหตุ</p>
-                <p>Remark:</p>
-            </div>
+        <div class="detail-footer-container">
+            <table class="table-detail-footer">
+                <tr>
+                    <td class="item-left-table-detail-footer">
+                        <p>รายละเอียดเพิ่มเติม</p>
+                        <p>Detail:</p>
+                    </td>
+                    <td class="item-right-table-detail-footer">
+                        <p>หมายเหตุ</p>
+                        <p>Remark:</p>
+                    </td>
+                </tr>
+            </table>
         </div>
-        <div class="signature-flex-container">
-            <div class="signature-business">
-                <p>For MM/สำหรับบริษัท</p>
-                <p>(Authorized person acknowledgement)</p>
-                <p>ลงชื่อ/Name...........................................</p>
-                <p>ตำแหน่ง/Position....................................</p>
-                <p>วันที่/Data...............................................</p>
-                <p>MM Logistics Co., Ltd.</p>
-            </div>
-            <div class="signature-client">
-                <p>For Client/สำหรับลูกค้า</p>
-                <p>Client's representative</p>
-                <p>ลงชื่อ/Name...........................................</p>
-                <p>ตำแหน่ง/Position....................................</p>
-                <p>วันที่/Data...............................................</p>
-            </div>
+        <div class="signature-container">
+            <table class="table-signature">
+                <tr>
+                    <td class="item-left-table-signature">
+                        <p>For MM/สำหรับบริษัท</p>
+                        <p>(Authorized person acknowledgement)</p>
+                        <p>ลงชื่อ/Name............................................</p>
+                        <p>ตำแหน่ง/Position....................................</p>
+                        <p>วันที่/Data.................................................</p>
+                        <p>MM Logistics Co., Ltd.</p>
+                    </td>
+                    <td class="item-right-table-signature">
+                        <p>For Client/สำหรับลูกค้า</p>
+                        <p>Client's representative</p>
+                        <p>ลงชื่อ/Name............................................</p>
+                        <p>ตำแหน่ง/Position....................................</p>
+                        <p>วันที่/Data.................................................</p>
+                    </td>
+                </tr>
+            </table>
         </div>
     </div>
 </body>
