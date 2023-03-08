@@ -9,9 +9,261 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>FormPrint</title>
+
+    <style>
+   
+        .main-container {
+            height: 100%;
+            margin: 0%;
+            padding: 0;
+        }
+
+        body {
+          font-family: sans-serif;
+          font-size: 12px;
+          font-weight: 500;
+          color: #1C3F69;
+          margin: 0;
+          padding: 0;
+        }
+
+        h1 {
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        h2 {
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        p {
+          font-size: 12px;
+          font-weight: 400;
+        }
+
+        span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .underline {
+            text-decoration-line: underline;
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #ccc;
+          text-align: center;
+          height: 25px;
+        }
+
+        th {
+          background-color: #f2f2f2;
+          font-size: 12px;
+          font-weight: 600;
+        }
+
+        .logo-flax-container {
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            height: 45px;
+        }
+
+        .logo-title {
+            text-align: center;
+            margin-left: 5px;
+            padding: 0%;
+        }
+        .logo-title h1 {
+            margin: 0%;
+        }
+
+        .logo-title p {
+            margin-top: 5px;
+        }
+
+        .address-container{
+            text-align: center;
+        }
+
+        .address-container h2, h3, p {
+            margin: 2px 0px 0px 0px;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .detail-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .detail-a p {
+            margin: 2px 0px 0px 0px;
+        }
+
+        .detail-b p {
+            margin: 2px 0px 0px 0px;
+        }
+
+        .table-container {
+            margin: 1rem 0rem 1rem 0rem;
+            height: 350px;
+        }
+
+        .detail-flex-container {
+            display: flex;
+            justify-content: space-between;
+            height: 250px;
+        }
+
+        .detail {
+            width: 40%;
+        }
+        .remark {
+            width: 40%;
+        }
+
+        .signature-flex-container {
+            display: flex;
+            justify-content: space-between;
+
+        }
+    </style>
 </head>
 <body>
-    <div> 
+    <div class="main-container">
+        <div class="logo-flax-container">
+            <div class="logo">
+                <img src="content/img/MM Logistics.png" alt="" style="width: 80px; height: 34px;">
+            </div>
+            <div class="logo-title">
+                <h1>MM Logistics Co.,Ltd</h1>
+                <p>Tel. : +66(2) 652-0831</p>
+            </div>
+        </div>
+        <div class="address-container">
+            <h2>518/5 MM LOGISTIC CENTER BUILDING 11th FLOOR, PLOENCHIT ROAD, LUMPINEE, PATHUMWAN, BANGKOK 10330</h2>
+            <h3>บริษัท เอ็ม เอ็ม ลอจิสติคส์ จำกัด</h3>
+            <p>518/5 ชั้น 11 อาคารมณียาเซ็นเตอร์ ถนน เพลินจิต แขวง ลุมพินี เขต ปทุมวัน กรุงเทพฯ 10330 </p>
+        </div>
+        <div class="title">
+            <h1 class="underline">ใบปฏิบัติงาน</h1>
+            <h1 class="underline">VEHICLE OPERATION TIME SHEET</h1>
+        </div>
+        <div class="detail-container">
+            <div class="detail-a">
+                <p>
+                    ลูกค้า
+                    <br>Customer:
+                    <span id="Customer_Name">PTTEP (Slick line)</span>
+                </p>
+                <p>
+                    ชนิดรถ
+                    <br>Vehicle Type:
+                    <span id="Vehicle_Type">Trailer Flatbed </span>
+                </p>
+                <p>
+                    หมายเลขรถ/ทะเบียน
+                    <br>No, Car License:
+                    <span id="Number_Car">FB/6</span>
+                </p>
+                <p>
+                    ชื่อพนักงานขับรถ
+                    <br>Driver Name:
+                    <span id="Driver_Name">Samarn/Somsak</span>
+                </p>
+            </div>
+            <div class="detail-b">
+                <p>
+                    เลขที่ No:
+                    <span id="Number">08323</span>
+                </p>
+                <p>
+                    วันที่ Date:
+                    <span id="Data">05/01/23</span>
+                </p>
+                <p>
+                    สถานที่ Place:
+                    <span id="Place">LKU-2J</span>
+                </p>
+                <p>
+                    เบอร์ติดต่อหัวหน้า
+                    <br>Tel. Supervisor:
+                    <span id="Tel_Supervisor">099-999-9999</span>
+                </p>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="table-content" id="table-content">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">
+                            รับจาก หรือ เริ่มงาน<br>
+                            From or Start Date
+                        </th>
+                        <th style="width: 10%;">
+                            เวลา<br>
+                            Time
+                        </th>
+                        <th style="width: 25%;">
+                            ลงที่ หรือ จนถึง<br>
+                            To or Until
+                        </th>
+                        <th style="width: 10%;">
+                            เวลา<br>
+                            Time
+                        </th>
+                        <th style="width: 30%;">
+                            เที่ยว/ชม./ก.ม.<br>
+                            Trip/Hour/K.m.
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="detail-flex-container">
+            <div class="detail">
+                <p>รายละเอียดเพิ่มเติม</p>
+                <p>Detail:</p>
+            </div>
+            <div class="remark">
+                <p>หมายเหตุ</p>
+                <p>Remark:</p>
+            </div>
+        </div>
+        <div class="signature-flex-container">
+            <div class="signature-business">
+                <p>For MM/สำหรับบริษัท</p>
+                <p>(Authorized person acknowledgement)</p>
+                <p>ลงชื่อ/Name...........................................</p>
+                <p>ตำแหน่ง/Position....................................</p>
+                <p>วันที่/Data...............................................</p>
+                <p>MM Logistics Co., Ltd.</p>
+            </div>
+            <div class="signature-client">
+                <p>For Client/สำหรับลูกค้า</p>
+                <p>Client's representative</p>
+                <p>ลงชื่อ/Name...........................................</p>
+                <p>ตำแหน่ง/Position....................................</p>
+                <p>วันที่/Data...............................................</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
