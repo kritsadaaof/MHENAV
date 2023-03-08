@@ -23,7 +23,7 @@ namespace MHENAV.Controllers
         {
             return View();
         }
-        public string CheckRQ()
+        public string CheckRQ(int ID)
         {
             //////////////////////////////////////////เช็คข้อมูล NAV ////////////////////
             var dataRsPL = (from Rs_PL in DbFile_NAV.MM_Logistics_CO___LTD__Resource_Planning
@@ -39,8 +39,10 @@ namespace MHENAV.Controllers
             /////////////////////////////////////////////////////////////////////////
             var data = (from TR_EnT in DbFile_Web.W_MHE_TR_Entries.AsEnumerable()
                             //     where TR_EnT.Type_Status != 2
+                          where ID!=0? TR_EnT.ID==ID:TR_EnT.Type_Status!=2
                         select new
                         {
+                            Gid= dataRsPL.Where(a => a.MHE_Name == TR_EnT.Vehicle_SN).FirstOrDefault() != null&& dataRsPL.Where(a => a.MHE_Name == TR_EnT.Driver).FirstOrDefault() != null ? "<input class='form-control z' style='height:13px' value='"+TR_EnT.ID+"'' type='checkbox'>" : "<input class='form-control z' style='height:13px' value='" + TR_EnT.ID + "'' type='checkbox' disabled>",
                             TR_EnT.ID,
                             TR_EnT.Req_No,
                             TR_EnT.Request_Date,
@@ -50,14 +52,15 @@ namespace MHENAV.Controllers
                             TR_EnT.Company,
                             TR_EnT.Model,
                             TR_EnT.Contract_Type,
-                            Vehicle_SN= dataRsPL.Where(a=>a.MHE_Name== TR_EnT.Vehicle_SN).FirstOrDefault()!=null?TR_EnT.Vehicle_SN:"ไม่พบทะเบียน",
-                            //TR_EnT.Vehicle_SN,
+                            Vehicle_SN= dataRsPL.Where(a=>a.MHE_Name== TR_EnT.Vehicle_SN).FirstOrDefault()!=null?TR_EnT.Vehicle_SN: "<i style='color: red'>"+ TR_EnT.Vehicle_SN + " ??</i>",
+                            Vehicle_SNo= TR_EnT.Vehicle_SN,
                             TR_EnT.From_Location,
                             TR_EnT.To_Location,
                             TR_EnT.Requester,
                             TR_EnT.Contact_Number,
                             TR_EnT.Description,
-                            TR_EnT.Driver,
+                            Driver=dataRsPL.Where(a=>a.MHE_Name==TR_EnT.Driver).FirstOrDefault()!=null?TR_EnT.Driver : "<i style='color: red'>" + TR_EnT.Driver + " ??</i>",
+                            DriverO = TR_EnT.Driver,
                             TR_EnT.Signaler,
                             TR_EnT.Driver_2,
                             TR_EnT.Signaler_2,
@@ -74,18 +77,18 @@ namespace MHENAV.Controllers
         public ActionResult addTask()
         {
             return View();
-        }
+        }    
 
-        public ActionResult PrintViewToPdf(int ID)//, string MACH, string QTY_UNTRY)
+        public ActionResult PrintViewToPdf()//, string MACH, string QTY_UNTRY)
 
         {
-            var report = new PartialViewAsPdf("~/Views/Task_Manage/FormPrint.cshtml", DbFile_Web.W_MHE_TR_Entries.Where(a => a.ID.Equals(1)).OrderByDescending(a => a.ID).FirstOrDefault())
+            var report = new PartialViewAsPdf("~/Views/Task_Manage/FormPrint.cshtml")//, DbFile_Web.W_MHE_TR_Entries.Where(a => a.ID.Equals(1)).OrderByDescending(a => a.ID).FirstOrDefault())
             {
                 PageSize = Rotativa.Options.Size.A4,
-                PageOrientation = Rotativa.Options.Orientation.Portrait,
-                PageMargins = { Top = 1, Bottom = 0, Right = 0 },
-                PageHeight = 155,
-                PageWidth = 105//105
+              //  PageOrientation = Rotativa.Options.Orientation.Portrait,
+              //  PageMargins = { Top = 1, Bottom = 0, Right = 0 }//,
+             //   PageHeight = 155,
+             //   PageWidth = 105//105
             };
             return report;
         }

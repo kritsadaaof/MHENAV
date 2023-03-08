@@ -1905,7 +1905,7 @@ pre {
 .form-control {
     display: block;
     width: 100%;
-    height: calc(2.25rem + 2px);
+    height: calc(2.10rem + 2px);
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;

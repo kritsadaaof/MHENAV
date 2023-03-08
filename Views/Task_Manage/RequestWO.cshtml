@@ -30,6 +30,7 @@
             background-color: #f2f2f2;
         }
 </style>
+
 <div class="container mt-2">
     <div class="jumbotron col-md-12 col-xs-12 col-sm-12 mt-1">
         <div style="text-align:center;"><p class="lead text-muted" style="font-family: Cambria;">Request Truck</p></div>
@@ -49,11 +50,9 @@
                                     <th>Time</th>
                                     <th>Model</th>
                                     <th>Vehicle</th>
-                                    <th>Origin</th>
-                                    <th>Destination</th>
-                                    <th>Product</th>
-                                    <th hidden>Status</th>
-                                    <th>#</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Driver</th>
                                     <th>More</th>
                                 </tr>
                             </thead>
@@ -61,11 +60,242 @@
                             <tbody>
                             </tbody>
                         </table>
-                        <button id="CreateJob" class="btn btn-primary button button1">ส่งงาน</button>
+                        <button id="CreateJob" class="genric-btn medium primary radius">Create wo</button>
+                        <button id="Form" class="genric-btn medium primary radius">Test Form</button>
                     </div>
                 </div>
             </div>
         </div>
 
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <div class="text-center">
+                    <i style="color:red;text-align:center">จัดการข้อมูล</i>
+                </div>
+                <div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+
+                <div class="row mt-2">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Task ID</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Task_ID" type="text" placeholder="-" class="form-control" disabled />
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Request date</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="RQ_Date" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Shift</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Shift" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Start Time</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="S_Time" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>End Time</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="E_Time" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Company</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Company" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Model</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Model" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Contract Type</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Contract_Type" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Vehicle SN<br><i style="color:red;font-size:10px" id="VehicleDetail"></i></i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Vehicle_SN" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>From</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="From_Lo" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>To</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="To_Lo" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Requester</i><i style="color:gray;font-size:12px"></i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Requester" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Contact No.</i><i style="color:gray;font-size:12px"></i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Contact_Number" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Description</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Description" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Driver</i><i style="color:red;font-size:10px" id="Driverdetail"></i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Driver" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Signaler</i><i style="color:gray;font-size:12px"></i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Signaler" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Driver 2</i><i style="color:gray;font-size:12px"></i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Driver_2" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+
+                        <div class="row mt-1">
+                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                <i>Signaler 2</i>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-12">
+                                <input id="Signaler_2" type="text" placeholder="-" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-12 col-md-12 mt-1" style="text-align:center">
+                        <button id="Save" class="genric-btn medium primary radius fa fa-save" aria-label="Close"> บันทึกการแก้ไข</button>
+                        <button id="Print" class="genric-btn medium primary radius fa fa-circle" style="background-color:gray"> เคลียร์</button>
+                        <button id="Clear" class="genric-btn medium primary radius" hidden>กลับ</button>
+                        <button id="PrintAll" class="genric-btn medium primary1 radius" style="display:none">พิมพ์ทั้งหมด</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalAlert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"> 
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content"> 
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mg-t-10 text-center mt-1"> 
+                <label class="Text">คุณต้องการเลข Job เดิมหรือไม่</label> 
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mg-t-10 text-center">
+                <div class="col-md-10 row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" class="" id="cb1" placeholder="กรอกข้อมูล" value="" onclick="cb()">&nbsp&nbsp<i>ใช่</i>
+                    </div>
+                    <div class="col-md-6" id="unhide" style="display:none">
+
+                        <!--<option selected="selected" value="JBKK2111000001">JBKK2111000001</option>-->
+
+                        <select class="custom-select" data-live-search="true" id="oldjob">
+                        </select>
+                        <input type="text" class="form-control" id="JobInput" placeholder="หรือกรอกเลข JOB" value="">
+                    </div>
+                </div>
+            </div> 
+            <div class="modal-body">
+                <div class="row mt-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mg-t-10 text-center">
+                        <button id="send" class="btn btn-primary button button1" data-dismiss="modal">ยืนยัน</button>
+
+                        <button class="btn btn-primary button button1" data-dismiss="modal">Back</button>
+                        <a href="@Url.Action("RequestWO", new {})" id="Clear" class="btn btn-primary button button1" hidden>Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
