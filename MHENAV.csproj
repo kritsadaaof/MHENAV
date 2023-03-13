@@ -191,6 +191,9 @@
     <Compile Include="Models\MM_Logistics_CO___LTD__Temp_Request.cs">
       <DependentUpon>DB_NAV.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\W_MHE_TimeSheet.cs">
+      <DependentUpon>DB_WEB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\W_MHE_TR_Entries.cs">
       <DependentUpon>DB_WEB.tt</DependentUpon>
     </Compile>

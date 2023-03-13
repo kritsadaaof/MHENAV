@@ -27,5 +27,6 @@ namespace MHENAV.Models
     
         public DbSet<W_MHE_TR_Entries> W_MHE_TR_Entries { get; set; }
         public DbSet<Group_Time> Group_Time { get; set; }
+        public DbSet<W_MHE_TimeSheet> W_MHE_TimeSheet { get; set; }
     }
 }

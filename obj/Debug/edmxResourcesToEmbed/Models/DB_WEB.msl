@@ -4,6 +4,7 @@
     <EntitySetMapping Name="W_MHE_TR_Entries">
       <EntityTypeMapping TypeName="Web_MMLNAVModel.W_MHE_TR_Entries">
         <MappingFragment StoreEntitySet="W_MHE_TR_Entries">
+          <ScalarProperty Name="Driver_Sub" ColumnName="Driver_Sub" />
           <ScalarProperty Name="J_Type" ColumnName="J_Type" />
           <ScalarProperty Name="Shift" ColumnName="Shift" />
           <ScalarProperty Name="Note" ColumnName="Note" />
@@ -102,6 +103,18 @@
           <ScalarProperty Name="Group" ColumnName="Group" />
           <ScalarProperty Name="Text" ColumnName="Text" />
           <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="W_MHE_TimeSheet">
+      <EntityTypeMapping TypeName="Web_MMLNAVModel.W_MHE_TimeSheet">
+        <MappingFragment StoreEntitySet="W_MHE_TimeSheet">
+          <ScalarProperty Name="TS_Vehicle_SN" ColumnName="TS_Vehicle_SN" />
+          <ScalarProperty Name="TS_Vehicle_Type" ColumnName="TS_Vehicle_Type" />
+          <ScalarProperty Name="TS_Customer" ColumnName="TS_Customer" />
+          <ScalarProperty Name="TS_Date_Request" ColumnName="TS_Date_Request" />
+          <ScalarProperty Name="TS_No" ColumnName="TS_No" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

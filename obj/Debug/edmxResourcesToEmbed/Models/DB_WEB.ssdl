@@ -8,6 +8,17 @@
     <Property Name="Text" Type="nvarchar" MaxLength="100" />
     <Property Name="Group" Type="time" Precision="7" />
   </EntityType>
+  <EntityType Name="W_MHE_TimeSheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TS_No" Type="int" />
+    <Property Name="TS_Date_Request" Type="datetime2" Precision="7" />
+    <Property Name="TS_Customer" Type="nvarchar" MaxLength="100" />
+    <Property Name="TS_Vehicle_Type" Type="nvarchar" MaxLength="20" />
+    <Property Name="TS_Vehicle_SN" Type="nvarchar" MaxLength="20" />
+  </EntityType>
   <EntityType Name="W_MHE_TR_Entries">
     <Key>
       <PropertyRef Name="ID" />
@@ -101,9 +112,11 @@
     <Property Name="Note" Type="nvarchar" MaxLength="100" />
     <Property Name="Shift" Type="nvarchar" MaxLength="30" />
     <Property Name="J_Type" Type="nvarchar" MaxLength="10" />
+    <Property Name="Driver_Sub" Type="nvarchar" MaxLength="5" />
   </EntityType>
   <EntityContainer Name="Web_MMLNAVModelStoreContainer">
     <EntitySet Name="Group_Time" EntityType="Self.Group_Time" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="W_MHE_TimeSheet" EntityType="Self.W_MHE_TimeSheet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

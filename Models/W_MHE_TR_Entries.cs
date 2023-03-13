@@ -103,5 +103,6 @@ namespace MHENAV.Models
         public string Note { get; set; }
         public string Shift { get; set; }
         public string J_Type { get; set; }
+        public string Driver_Sub { get; set; }
     }
 }

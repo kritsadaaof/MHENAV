@@ -23,6 +23,13 @@ namespace MHENAV.Controllers
         {
             return View();
         }
+        public string UpdateCcSub(int ID, string STATUS)
+        {
+            var data = DbFile_Web.W_MHE_TR_Entries.Where(a => a.ID == ID).FirstOrDefault();
+            data.Driver_Sub = STATUS =="F"?null: data.Driver_Sub = STATUS;
+            DbFile_Web.SaveChanges();
+            return "";
+        }
         public string CheckRQ(int ID)
         {
             //////////////////////////////////////////เช็คข้อมูล NAV ////////////////////
@@ -85,9 +92,9 @@ namespace MHENAV.Controllers
             var report = new PartialViewAsPdf("~/Views/Task_Manage/FormPrint.cshtml")//, DbFile_Web.W_MHE_TR_Entries.Where(a => a.ID.Equals(1)).OrderByDescending(a => a.ID).FirstOrDefault())
             {
                 PageSize = Rotativa.Options.Size.A4,
-              //  PageOrientation = Rotativa.Options.Orientation.Portrait,
-              //  PageMargins = { Top = 1, Bottom = 0, Right = 0 }//,
-             //   PageHeight = 155,
+             //  PageOrientation = Rotativa.Options.Orientation.Portrait,
+                PageMargins = { Top = 15, Left=20, Right = 20 }//,
+             //  PageHeight = 155,
              //   PageWidth = 105//105
             };
             return report;

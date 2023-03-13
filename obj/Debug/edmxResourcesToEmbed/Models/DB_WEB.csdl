@@ -93,10 +93,12 @@
     <Property Name="Note" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Shift" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="J_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Driver_Sub" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityContainer Name="Web_MMLNAVEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" />
     <EntitySet Name="Group_Time" EntityType="Web_MMLNAVModel.Group_Time" />
+    <EntitySet Name="W_MHE_TimeSheet" EntityType="Web_MMLNAVModel.W_MHE_TimeSheet" />
   </EntityContainer>
   <EntityType Name="Group_Time">
     <Key>
@@ -105,5 +107,16 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Text" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Group" Type="Time" Precision="7" />
+  </EntityType>
+  <EntityType Name="W_MHE_TimeSheet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TS_No" Type="Int32" />
+    <Property Name="TS_Date_Request" Type="DateTime" Precision="7" />
+    <Property Name="TS_Customer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TS_Vehicle_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TS_Vehicle_SN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>
