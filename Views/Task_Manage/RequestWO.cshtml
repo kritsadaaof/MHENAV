@@ -54,6 +54,7 @@
                                     <th>Driver</th>
                                     <th>Sub.</th>
                                     <th>More</th>
+                                    <th><i class="fa fa-print"></i></th>
                                 </tr>
                             </thead>
 
@@ -61,7 +62,7 @@
                             </tbody>
                         </table>
                         <button id="CreateJob" class="genric-btn medium primary radius">Create wo</button>
-                        <button id="Form" class="genric-btn medium primary radius">Test Form</button>
+                        <button id="Form" class="genric-btn medium primary radius"hidden>Test Form</button>
                     </div>
                 </div>
             </div>
@@ -318,9 +319,9 @@
                                     <tr>
 
                                         <th>ต้นทาง</th>
-                                        <th>วันที่/เวลา ถึงต้นทาง</th>
+                                        <th>เวลาต้นทาง</th>
                                         <th>ปลายทาง</th>
-                                        <th>วันที่/เวลา ถึงปลายทาง</th>
+                                        <th>เวลาปลายทาง</th>
                                         <th width="5%"></th>
                                     </tr>
                                 </thead>
@@ -328,10 +329,10 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <td><input type="text" class="form-control" id="OriginL" placeholder="กรอกข้อมูล.." /></td>
-                                        <td><input type="datetime-local" class="form-control" id="DateTimeO" placeholder="กรอกข้อมูล.." /></td>
-                                        <td><input type="text" class="form-control" id="DestinationL" placeholder="กรอกข้อมูล.." /></td>
-                                        <td><input type="datetime-local" class="form-control" id="DateTimeD" placeholder="กรอกข้อมูล.." /></td>
+                                        <td><input type="text" class="form-control" id="OriginL" placeholder="-" /></td>
+                                        <td><input type="time" class="form-control" id="DateTimeO" placeholder="-" /></td>
+                                        <td><input type="text" class="form-control" id="DestinationL" placeholder="-" /></td>
+                                        <td><input type="time" class="form-control" id="DateTimeD" placeholder="-" /></td>
                                         <td> <i style="color:darkblue" id="btnAdd" class="btn">เพิ่ม</i></td>
                                     </tr>
                                 </tfoot>
@@ -343,9 +344,9 @@
 
                 <div class="row mt-3">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mg-t-10 text-center">
-                        <button id="send" class="btn btn-primary button button1" data-dismiss="modal">ยืนยัน</button>
+                        <button id="ConF" class="genric-btn medium primary radius fa fa-save" data-dismiss="modal">ยืนยัน</button>
 
-                        <button class="btn btn-primary button button1" data-dismiss="modal">Back</button>
+                        <button class="genric-btn medium primary radius fa fa-circle" data-dismiss="modal" style="background-color:gray">กลับ</button>
                         <a href="@Url.Action("RequestWO", new {})" id="Clear" class="btn btn-primary button button1" hidden>Back</a>
                     </div>
                 </div>

@@ -13,11 +13,20 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="TS_No" Type="int" />
+    <Property Name="TS_No" Type="nvarchar" MaxLength="30" />
     <Property Name="TS_Date_Request" Type="datetime2" Precision="7" />
     <Property Name="TS_Customer" Type="nvarchar" MaxLength="100" />
     <Property Name="TS_Vehicle_Type" Type="nvarchar" MaxLength="20" />
     <Property Name="TS_Vehicle_SN" Type="nvarchar" MaxLength="20" />
+    <Property Name="TS_Request_Date" Type="datetime2" Precision="7" />
+    <Property Name="TS_From_Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="TS_To_Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="TS_Start_Time" Type="time" Precision="7" />
+    <Property Name="TS_End_Time" Type="time" Precision="7" />
+    <Property Name="TS_Status" Type="nvarchar" MaxLength="10" />
+    <Property Name="TS_DateTime_Stamp" Type="date" />
+    <Property Name="TS_ID" Type="int" />
+    <Property Name="TS_Runnig_No" Type="nvarchar" MaxLength="12" />
   </EntityType>
   <EntityType Name="W_MHE_TR_Entries">
     <Key>
@@ -114,9 +123,25 @@
     <Property Name="J_Type" Type="nvarchar" MaxLength="10" />
     <Property Name="Driver_Sub" Type="nvarchar" MaxLength="5" />
   </EntityType>
+  <Association Name="Ent_TimeS">
+    <End Role="W_MHE_TR_Entries" Type="Self.W_MHE_TR_Entries" Multiplicity="0..1" />
+    <End Role="W_MHE_TimeSheet" Type="Self.W_MHE_TimeSheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="W_MHE_TR_Entries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="W_MHE_TimeSheet">
+        <PropertyRef Name="TS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Web_MMLNAVModelStoreContainer">
     <EntitySet Name="Group_Time" EntityType="Self.Group_Time" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="W_MHE_TimeSheet" EntityType="Self.W_MHE_TimeSheet" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Ent_TimeS" Association="Self.Ent_TimeS">
+      <End Role="W_MHE_TR_Entries" EntitySet="W_MHE_TR_Entries" />
+      <End Role="W_MHE_TimeSheet" EntitySet="W_MHE_TimeSheet" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

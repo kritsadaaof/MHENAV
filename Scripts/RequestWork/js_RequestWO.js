@@ -62,13 +62,10 @@
         var DateTimeO = $("#DateTimeO");
         var DestinationL = $("#DestinationL");
         var DateTimeD = $("#DateTimeD");
-
         //Get the reference of the Table's TBODY element.
         var tBody = $("#tab_logic1 > TBODY")[0];
-
         //Add Row.
         var row = tBody.insertRow(-1);
-
         var cell = $(row.insertCell(-1));
         cell.html(OriginL.val());
 
@@ -80,11 +77,6 @@
 
         cell = $(row.insertCell(-1));
         cell.html(DateTimeD.val());
-
-
-
-
-
         //Add Button cell.
         cell = $(row.insertCell(-1));
         var btnRemove = $("<i  style='color: darkblue' class='btn'></i>");
@@ -92,13 +84,48 @@
         btnRemove.attr("onclick", "Remove(this);");
         btnRemove.html("ลบ ");
         cell.append(btnRemove);
-
         //Clear the TextBoxes.
         OriginL.val("");
         DestinationL.val("");
         DateTimeO.val("");
         DateTimeD.val("");
         // }
+    });
+    $("#ConF").click(function () {
+        var Items = new Array();
+        $("#tab_logic1 TBODY TR").each(function () {
+            var row = $(this);
+            var Item = {};
+            Item.TS_From_Location = row.find("TD").eq(0).html();
+            Item.TS_Start_Time = row.find("TD").eq(1).html();
+            Item.TS_To_Location = row.find("TD").eq(2).html();
+            Item.TS_End_Time = row.find("TD").eq(3).html();
+            Items.push(Item);
+        });
+     //   alert($(this).data('info'));
+        $.post(baseUrl + "Task_Manage/SaveAddwork", {
+            ID: $(this).data('info'),
+            ITEM: Items
+        }).done(function (data) {
+            if (data == "S") {
+                var nFrom = "bottom";
+                var nAlign = "center";
+                var nIcons = $(this).attr('data-icon');
+                var nType = "success";
+                var nAnimIn = $(this).attr('data-animation-in');
+                var nAnimOut = $(this).attr('data-animation-out');
+                var mEss = "สำเร็จ";
+                notify(nFrom, nAlign, nIcons, nType, nAnimIn, nAnimOut, mEss);
+
+                setTimeout(
+                    function () {
+                        location.reload();
+                    }, 3000);
+            }
+            else {
+                CheckNull("ไม่สำเร็จ");
+            }
+        }); //*/
     });
 
 });
@@ -136,7 +163,8 @@ function Load() {
                 "<td>" + pr[i]["Driver"] + "</td>" +
                 "<td><input class='form-control x' style='height:13px' id='ChSub" + pr[i]["ID"] + "'' type='checkbox'  onclick=ChSub('" + pr[i]["ID"] + "');></td>" +
                 "<td  style='text-align:center;'> <a href='#' class='fa fa-edit' style='color:gray;' onclick= ClickData('" + pr[i]["ID"] + "'); ></a ></td>" +
-                "</tr>");
+                "<td  style='text-align:center;'> <a href='#' class='fa fa-print' style='color:gray;' onclick= ClickPrint('" + pr[i]["ID"] + "'); ></a ></td>" +
+                "</tr>"); //<i class="fa fa-print">
         });
         $("#wait").css("display", "none");
     });
@@ -202,6 +230,12 @@ function ClickData(Session_ID) {
       return false;
   }  
 } //*/
+
+function ClickPrint(Session_ID) {
+    ShowWait();
+    window.open(baseUrl + "Task_Manage/PrintViewToPdf?id=" + Session_ID);
+    $("#wait").css("display", "none");
+}
 function ClickData(Session_ID) {
     ShowWait();
     $.post(baseUrl + "Task_Manage/CheckRQ", {
@@ -230,6 +264,7 @@ function ClickData(Session_ID) {
         $("#Signaler_2").val(pr[0]["Signaler_2"]);
 
         $("#exampleModalLong").modal('show');
+        $("#ConF").data('info', Session_ID);
         $("#wait").css("display", "none");
     });
 }

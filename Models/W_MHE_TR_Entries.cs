@@ -14,6 +14,11 @@ namespace MHENAV.Models
     
     public partial class W_MHE_TR_Entries
     {
+        public W_MHE_TR_Entries()
+        {
+            this.W_MHE_TimeSheet = new HashSet<W_MHE_TimeSheet>();
+        }
+    
         public int ID { get; set; }
         public string Customer { get; set; }
         public string Contract_No { get; set; }
@@ -104,5 +109,7 @@ namespace MHENAV.Models
         public string Shift { get; set; }
         public string J_Type { get; set; }
         public string Driver_Sub { get; set; }
+    
+        public virtual ICollection<W_MHE_TimeSheet> W_MHE_TimeSheet { get; set; }
     }
 }

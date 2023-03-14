@@ -94,11 +94,16 @@
     <Property Name="Shift" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="J_Type" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
     <Property Name="Driver_Sub" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="W_MHE_TimeSheet" Relationship="Web_MMLNAVModel.Ent_TimeS" FromRole="W_MHE_TR_Entries" ToRole="W_MHE_TimeSheet" />
   </EntityType>
   <EntityContainer Name="Web_MMLNAVEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="W_MHE_TR_Entries" EntityType="Self.W_MHE_TR_Entries" />
     <EntitySet Name="Group_Time" EntityType="Web_MMLNAVModel.Group_Time" />
     <EntitySet Name="W_MHE_TimeSheet" EntityType="Web_MMLNAVModel.W_MHE_TimeSheet" />
+    <AssociationSet Name="Ent_TimeS" Association="Web_MMLNAVModel.Ent_TimeS">
+      <End Role="W_MHE_TR_Entries" EntitySet="W_MHE_TR_Entries" />
+      <End Role="W_MHE_TimeSheet" EntitySet="W_MHE_TimeSheet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Group_Time">
     <Key>
@@ -113,10 +118,32 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TS_No" Type="Int32" />
+    <Property Name="TS_No" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="TS_Date_Request" Type="DateTime" Precision="7" />
     <Property Name="TS_Customer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="TS_Vehicle_Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="TS_Vehicle_SN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TS_Request_Date" Type="DateTime" Precision="7" />
+    <Property Name="TS_From_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TS_To_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TS_Start_Time" Type="Time" Precision="7" />
+    <Property Name="TS_End_Time" Type="Time" Precision="7" />
+    <Property Name="TS_Status" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TS_DateTime_Stamp" Type="DateTime" Precision="0" />
+    <Property Name="TS_ID" Type="Int32" />
+    <Property Name="TS_Runnig_No" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="W_MHE_TR_Entries" Relationship="Web_MMLNAVModel.Ent_TimeS" FromRole="W_MHE_TimeSheet" ToRole="W_MHE_TR_Entries" />
   </EntityType>
+  <Association Name="Ent_TimeS">
+    <End Type="Web_MMLNAVModel.W_MHE_TR_Entries" Role="W_MHE_TR_Entries" Multiplicity="0..1" />
+    <End Type="Web_MMLNAVModel.W_MHE_TimeSheet" Role="W_MHE_TimeSheet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="W_MHE_TR_Entries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="W_MHE_TimeSheet">
+        <PropertyRef Name="TS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

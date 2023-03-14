@@ -109,6 +109,15 @@
     <EntitySetMapping Name="W_MHE_TimeSheet">
       <EntityTypeMapping TypeName="Web_MMLNAVModel.W_MHE_TimeSheet">
         <MappingFragment StoreEntitySet="W_MHE_TimeSheet">
+          <ScalarProperty Name="TS_Runnig_No" ColumnName="TS_Runnig_No" />
+          <ScalarProperty Name="TS_ID" ColumnName="TS_ID" />
+          <ScalarProperty Name="TS_DateTime_Stamp" ColumnName="TS_DateTime_Stamp" />
+          <ScalarProperty Name="TS_Status" ColumnName="TS_Status" />
+          <ScalarProperty Name="TS_End_Time" ColumnName="TS_End_Time" />
+          <ScalarProperty Name="TS_Start_Time" ColumnName="TS_Start_Time" />
+          <ScalarProperty Name="TS_To_Location" ColumnName="TS_To_Location" />
+          <ScalarProperty Name="TS_From_Location" ColumnName="TS_From_Location" />
+          <ScalarProperty Name="TS_Request_Date" ColumnName="TS_Request_Date" />
           <ScalarProperty Name="TS_Vehicle_SN" ColumnName="TS_Vehicle_SN" />
           <ScalarProperty Name="TS_Vehicle_Type" ColumnName="TS_Vehicle_Type" />
           <ScalarProperty Name="TS_Customer" ColumnName="TS_Customer" />

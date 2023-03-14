@@ -7,7 +7,8 @@
       <Diagram DiagramId="1c8d1b155a2b4f0bb776f1cb8fa55edb" Name="Diagram1" ZoomLevel="28">
         <EntityTypeShape EntityType="Web_MMLNAVModel.W_MHE_TR_Entries" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Web_MMLNAVModel.Group_Time" Width="1.5" PointX="3.375" PointY="0.75" />
-        <EntityTypeShape EntityType="Web_MMLNAVModel.W_MHE_TimeSheet" Width="1.5" PointX="3.375" PointY="3.75" />
+        <EntityTypeShape EntityType="Web_MMLNAVModel.W_MHE_TimeSheet" Width="1.5" PointX="3" PointY="8" />
+        <AssociationConnector Association="Web_MMLNAVModel.Ent_TimeS" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
